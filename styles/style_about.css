@@ -1,0 +1,27 @@
+#title-name-container{
+  font-size: 10em;
+  margin: auto;
+  padding: 1em;
+  padding-bottom: 0;
+
+  text-align: left;
+
+  line-height: 90%;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+
+  height: 100%;
+  width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+  #title-name-container{
+    font-size: 3em;
+    padding: 1em;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
