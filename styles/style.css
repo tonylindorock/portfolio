@@ -17,16 +17,16 @@ html {
   height: 100%;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-canvas{
+canvas {
   display: block;
 }
 
-body{
+body {
   height: 100%;
   color: white;
   background-color: black;
@@ -38,31 +38,30 @@ footer {
   padding: 16px;
   color: white;
   background-color: black;
-
   font-size: 150%;
 }
 
-img{
+img {
   width: 100%;
 }
 
-video{
+video {
   width: 100%;
   margin: auto;
   padding: 0;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
-#link{
+#link {
   color: white;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
-#link:hover{
+#link:hover {
   border-bottom: 1px solid white;
 }
 
@@ -71,18 +70,14 @@ a{
   font-weight: bold;
   color: white;
   font-size: 100%;
-
   border: none;
   background: none;
   background-color: inherit;
   border-radius: 8px;
-
   cursor: pointer;
   display: inline-block;
-
   padding-left: 1em;
   padding-right: 1em;
-
   opacity: 0.6;
   transition: 0.3s;
 }
@@ -97,46 +92,36 @@ a{
 }
 
 .parallax {
-  width: 100%;
-  height: 100%;
-
+  width: 100vw;
+  height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-/*
-@media only screen and (max-device-width: 1366px) {
-  .parallax {
-    background-attachment: scroll;
-  }
-}*/
 
-.horizontal-container{
+.horizontal-container {
   display: flex;
   overflow: scroll;
 }
 
-.vertical-container{
+.vertical-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.grid-container{
-
+.grid-container {
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: auto auto;
-
   grid-gap: 16px;
 }
 
-.text-box{
+.text-box {
   padding: 4em;
   width: 50%;
   margin: auto;
-
   line-height: 1.5;
 }
 
@@ -149,34 +134,29 @@ a{
   transform: translate(-50%, -50%);
 }
 
-.overlay-text{
+.overlay-text {
   position: fixed;
   top: 1em;
   left: 1em;
-
   z-index: 1;
 }
 
-.parallax-btn{
+.parallax-btn {
   display: inline-block;
   text-decoration: none;
   color: white;
-
   font-size: 125%;
   text-align: center;
   line-height: 2;
-
   top: 85%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   position: relative;
   z-index: 1;
-
   transition: 0.3s;
 }
 
-.parallax-btn:hover{
+.parallax-btn:hover {
   cursor: pointer;
   font-size: 150%;
 }
@@ -189,7 +169,6 @@ a{
   border-radius: 50%;
   display: inline-block;
   transition: 0.6s;
-
   margin: 8px;
   margin-top: 12px;
   margin-bottom: 12px;
@@ -199,110 +178,103 @@ a{
   background-color: white;
 }
 
-
-#font-normal{
+#font-normal {
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 95%;
-
   line-height: 2;
   letter-spacing: 0.8px;
 }
 
-#font-bold{
+#font-bold {
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
-#font-title{
+#font-title {
   font-family: "Roboto Condensed Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 8vw;
   line-height: 0.8;
-
   text-transform: uppercase;
 }
 
-#font-title-animated{
+#font-title-animated {
   font-family: "Roboto Condensed Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 8vw;
   line-height: 0.8;
-
   text-transform: uppercase;
-
   animation: 1s ease-in-out 1s 1 fade-out;
   animation-fill-mode: forwards;
 }
 
-#name{
+#name {
   color: #FFF;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 150%;
   line-height: 0.8;
-
   position: fixed;
   margin: 1.5em;
-
   z-index: 99;
 }
 
-#email{
+#email {
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
   font-size: 65%;
 }
 
-#credits{
+#credits {
   display: block;
-
   text-align: center;
   text-transform: uppercase;
-
   font-size: 0.7em;
   letter-spacing: 4px;
   line-height: 1;
-
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
 
-#credits-small{
+#credits-small {
   font-size: 0.75em;
 }
 
-@media only screen and (max-width: 600px) {
-  .text-box{
+@media only screen and (max-width: 800px) {
+  .text-box {
     padding: 1em;
     width: 90%;
     margin: auto;
   }
 
-  .overlay-text{
+  .overlay-text {
     position: static;
     margin: 1em;
     margin-top: 1.5em;
   }
 
-  .grid-container{
+  .grid-container {
     padding: 0;
     grid-template-columns: auto;
   }
 
-  #name{
+  #name {
     font-size: 1.25em;
-
     margin: 1em;
     margin-bottom: 2em;
   }
 
-  #font-title-animated{
+  #font-title-animated {
     animation: none;
   }
 
-  .horizontal-container{
+  .horizontal-container {
     justify-content: center;
+  }
+
+  .parallax {
+    background-attachment: scroll;
   }
 }
 
@@ -310,53 +282,53 @@ a{
   0% {
     opacity: 1;
   }
+
   100% {
     opacity: 0;
   }
 }
 
-#parallax-pic-0{
+#parallax-pic-0 {
   background-image: url("../assets/images/atcw_power_day.jpg");
   min-height: 768px;
 }
 
-#parallax-pic-1{
+#parallax-pic-1 {
   background-image: url("../assets/images/atcw_power_night.jpg");
   min-height: 768px;
 }
 
-#parallax-pic-2{
+#parallax-pic-2 {
   background-image: url("../assets/images/atcw_signal.jpg");
   min-height: 768px;
 }
 
-#parallax-pic-3{
+#parallax-pic-3 {
   background-image: url("../assets/images/tbh_ss_4.jpg");
   min-height: 540px;
 }
 
-#parallax-pic-4{
+#parallax-pic-4 {
   background-image: url("../assets/images/hd_frame_0.jpg");
   min-height: 540px;
 }
 
-#parallax-pic-5{
+#parallax-pic-5 {
   background-image: url("../assets/images/ap_frame.jpg");
   min-height: 270px;
 }
 
-#parallax-pic-6{
+#parallax-pic-6 {
   background-image: url("../assets/images/dayless_showcase_tools.jpg");
   min-height: 540px;
 }
 
-#parallax-pic-7{
+#parallax-pic-7 {
   background-image: url("../assets/images/oblivion_cover.jpg");
   min-height: 540px;
 }
 
-#parallax-solid{
+#parallax-solid {
   background-color: black;
-
   z-index: 2;
 }
