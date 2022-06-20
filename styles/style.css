@@ -93,7 +93,7 @@ a {
 
 .parallax {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
