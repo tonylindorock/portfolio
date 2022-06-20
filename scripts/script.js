@@ -2,23 +2,23 @@
 // script
 let scrolled = false;
 
-$(document).ready(function(){
+$(document).ready(function() {
   setupBtns();
 });
 
-window.onscroll = function(){
+window.onscroll = function() {
   scrolled = true;
   windowScrolled();
 
-  const timer = setTimeout(function(){
+  const timer = setTimeout(function() {
     scrolled = false;
     $("#font-title").attr("id", "font-title-animated");
   }, 1000);
 };
 
-function setupBtns(){
-  $("#btn-portfolio").click(function(){
-    if (document.title != "Portfolio"){
+function setupBtns() {
+  $("#btn-portfolio").click(function() {
+    if (document.title != "Portfolio") {
       window.location.href = "index.html";
       return;
     }
@@ -26,12 +26,14 @@ function setupBtns(){
   });
 }
 
-function goToTop(duration = 1000){
-  $("html, body").animate({scrollTop: "0" }, duration);
+function goToTop(duration = 1000) {
+  $("html, body").animate({
+    scrollTop: "0"
+  }, duration);
 }
 
-function windowScrolled(){
-  if ($("#font-title-animated") !== null && scrolled){
+function windowScrolled() {
+  if ($("#font-title-animated") !== null && scrolled) {
     $("#font-title-animated").attr("id", "font-title");
   }
 }

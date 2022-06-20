@@ -12,71 +12,71 @@ let firstName = FIRST_NAME;
 let firstName_1 = FIRST_NAME_1
 let lastName = LAST_NAME;
 
-$(document).ready(function(){
+$(document).ready(function() {
   setupBtns();
 });
 
-function setupBtns(){
-  $("#btn-about").click(function(){
+function setupBtns() {
+  $("#btn-about").click(function() {
     goToTop(500);
   });
 }
 
 // scroll event
 // change the name when scrolling
-$(window).scroll(function(){
+$(window).scroll(function() {
   nameGlitch();
 });
 
-function nameGlitch(){
+function nameGlitch() {
   let p = Math.random();
-  if (p < 0.05){
+  if (p < 0.05) {
     p = Math.random();
-    if (p < 0.25){
+    if (p < 0.25) {
       firstName = FIRST_NAME_ALT;
       firstName_1 = "";
       lastName = LAST_NAME_ALT;
-    }else{
+    } else {
       firstName = FIRST_NAME;
       firstName_1 = FIRST_NAME_1;
       lastName = LAST_NAME;
     }
   }
 
-  for(let i = 0; i < firstName.length; i++){
+  for (let i = 0; i < firstName.length; i++) {
     firstName = replaceChar(firstName, randomizeCharCase(firstName[i]), i);
   }
-  for(let i = 0; i < firstName_1.length; i++){
+  for (let i = 0; i < firstName_1.length; i++) {
     firstName_1 = replaceChar(firstName_1, randomizeCharCase(firstName_1[i]), i);
   }
-  for(let i = 0; i < lastName.length; i++){
+  for (let i = 0; i < lastName.length; i++) {
     lastName = replaceChar(lastName, randomizeCharCase(lastName[i]), i);
   }
 
   $("#about-name").html(firstName + firstName_1 + "<br>" + lastName);
 }
 
-function randomizeCharCase(letter){
+function randomizeCharCase(letter) {
   let p = Math.random();
-  if (p < 0.01){
+  if (p < 0.01) {
     p = Math.random();
-    if (p < 0.5){
+    if (p < 0.5) {
       letter = letter.toLowerCase();
-    }else{
+    } else {
       letter = letter.toUpperCase();
     }
   }
   return letter;
 }
 
-function randomizeLang(){
+function randomizeLang() {
 
 }
 
 function replaceChar(origStr, newChar, index) {
-    let firstPart = origStr.substr(0, index);
-    let lastPart = origStr.substr(index + 1);
+  let firstPart = origStr.substr(0, index);
+  let lastPart = origStr.substr(index + 1);
 
-    let newStr = firstPart + newChar + lastPart;
-    return newStr;
+  let newStr = firstPart + newChar + lastPart;
+  return newStr;
 }
