@@ -100,6 +100,7 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover
+  -moz-background-size: cover;
 }
 
 .horizontal-container {
@@ -244,6 +245,12 @@ a {
   font-size: 0.75em;
 }
 
+@media only screen and (max-device-width: 1400px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .text-box {
     padding: 1em;
@@ -274,10 +281,6 @@ a {
 
   .horizontal-container {
     justify-content: center;
-  }
-
-  .parallax {
-    background-attachment: scroll;
   }
 
   footer {
