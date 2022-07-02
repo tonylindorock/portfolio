@@ -16,7 +16,7 @@
 html {
   height: 100%;
   width: 100vw;
-  overflow: visible;
+  overflow: auto;
 }
 
 * {
@@ -238,7 +238,7 @@ a {
 
 .horizontal-container {
   display: flex;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .vertical-container {
