@@ -50,7 +50,7 @@ img{
 }
 
 img.banner{
-    width: 100%;
+    width: 100vw;
     margin: 0;
     border-radius: 0;
     position: fixed;
@@ -91,7 +91,7 @@ video{
 }
 
 .img-mockup-lanscape{
-    width: 100%;
+    width: 100vw;
     align-self: center;
     border-radius: 16px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
@@ -127,11 +127,11 @@ video{
 }
 
 .separate-container.left{
-    grid-template-columns: 35% auto;
+    grid-template-columns: 35vw auto;
 }
 
 .separate-container.right{
-    grid-template-columns: auto 35%;
+    grid-template-columns: auto 35vw;
 }
 
 .text-container{
@@ -170,7 +170,7 @@ video{
 
 .text-box-left {
     padding: 4em;
-    width: 50%;
+    width: 50vw;
     margin-right: auto;
     line-height: 1.5;
 }
