@@ -13,7 +13,9 @@ let firstName_1 = FIRST_NAME_1
 let lastName = LAST_NAME;
 
 $(document).ready(function() {
-  setupBtns();
+  $("#btn-about").click(function() {
+    goToTop(500);
+  });
 });
 
 function setupBtns() {
@@ -58,7 +60,7 @@ function nameGlitch() {
 
 function randomizeCharCase(letter) {
   let p = Math.random();
-  if (p < 0.01) {
+  if (p < 0.03) {
     p = Math.random();
     if (p < 0.5) {
       letter = letter.toLowerCase();

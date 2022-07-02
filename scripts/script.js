@@ -1,5 +1,6 @@
 "use strict"
 // script
+
 let scrolled = false;
 
 $(document).ready(function() {
@@ -18,10 +19,6 @@ window.onscroll = function() {
 
 function setupBtns() {
   $("#btn-portfolio").click(function() {
-    if (document.title != "Portfolio") {
-      window.location.href = "index.html";
-      return;
-    }
     goToTop();
   });
 }
@@ -33,7 +30,10 @@ function goToTop(duration = 1000) {
 }
 
 function windowScrolled() {
+  // project title animation
   if ($("#font-title-animated") !== null && scrolled) {
     $("#font-title-animated").attr("id", "font-title");
   }
+
+  handleNavbar();
 }
