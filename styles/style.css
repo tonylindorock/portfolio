@@ -16,7 +16,8 @@
 html {
   height: 100%;
   width: 100vw;
-  overflow: auto;
+  overflow-y: auto;
+  -ms-overflow-style: scrollbar;
 }
 
 * {
@@ -32,7 +33,8 @@ body {
   height: 100%;
   width: 100vw;
   color: white;
-  overflow: auto;
+  overflow-y: auto;
+  -ms-overflow-style: scrollbar;
   background-color: black;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
