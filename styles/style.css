@@ -14,22 +14,20 @@
 }
 
 html {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
 }
 
 * {
   margin: 0;
   padding: 0;
-}
-
-canvas {
-  display: block;
+  /*outline: 1px solid #f00 !important;*/
 }
 
 body {
-  height: 100vh;
-  width: 100vw;
+  display: block;
+  height: 100%;
+  width: 100%;
   color: white;
   overflow-y: visible;
   -ms-overflow-style: scrollbar;
@@ -57,10 +55,10 @@ footer {
 }
 
 img {
-  width: -moz-calc(100vw - 32px);
-  width: -webkit-calc(100vw - 32px);
-  width: -o-calc(100vw - 32px);
-  width: calc(100vw - 32px);
+  width: -moz-calc(100% - 32px);
+  width: -webkit-calc(100% - 32px);
+  width: -o-calc(100% - 32px);
+  width: calc(100% - 32px);
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -68,13 +66,13 @@ img {
 }
 
 .img-banner{
-  width: 100vw;
+  width: 100%;
   margin: 0;
   border-radius: 0;
 }
 
 video {
-  width: 100vw;
+  width: 100%;
   margin: auto;
   padding: 0;
 }
@@ -226,7 +224,7 @@ a {
 }
 
 .parallax {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   background-attachment: fixed;
   background-position: center;
@@ -293,7 +291,7 @@ a {
 }
 
 .parallax-btn {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: white;
   font-size: 125%;
@@ -426,7 +424,7 @@ a {
   font-weight: 100;
 }
 
-#credits-small {
+.credits-small {
   font-size: 0.75em;
 }
 

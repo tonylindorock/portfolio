@@ -63,7 +63,7 @@
   z-index: -999;
 }
 
-#credits-movie {
+.credits-movie {
   display: block;
   text-align: center;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
 }
 
 #image-alt {
-  width: 75vw;
+  width: 75%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -101,7 +101,7 @@
   }
 
   #image-alt {
-    width: 100vw;
+    width: 100%;
   }
 
   .caption {
