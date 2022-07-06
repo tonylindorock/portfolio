@@ -16,11 +16,13 @@
 html {
   height: 100%;
   width: 100%;
+  overflow-y: visible;
 }
 
 * {
   margin: 0;
   padding: 0;
+  /* for debug only */
   /*outline: 1px solid #f00 !important;*/
 }
 
@@ -30,28 +32,56 @@ body {
   width: 100%;
   color: white;
   overflow-y: visible;
-  -ms-overflow-style: scrollbar;
   background-color: black;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
 }
 
 footer {
-  height: 25vh;
-  padding: 16px;
+  min-height: 232px;
+  height: 25%;
+  padding: 16px 15%;
   padding-bottom: 64px;
   color: white;
   background-color: #111;
-  font-size: 100%;
+  font-size: 15px;
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
   line-height: 1.5;
   letter-spacing: 0.4px;
   display: grid;
-  gap: 64px;
+  gap: 32px;
   grid-template-columns: auto auto auto;
   align-content: center;
   justify-content: space-evenly;
+  z-index: 2;
+  position: relative;
+}
+
+.footnote {
+  display: block;
+  margin: 16px;
+  padding: 16px 15%;
+  border-radius: 8px;
+  background-color: #262626;
+  font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.footnote a{
+  color: #eee;
+}
+
+.footnote p{
+  color: #aaa;
+  margin: auto;
+  max-width: 1152px;
+}
+
+.footnote a:hover{
+  text-decoration: underline;
 }
 
 img {
@@ -102,12 +132,9 @@ a {
   font-size: 100%;
   border: none;
   background: none;
-  background-color: none;
   border-radius: 8px;
-  cursor: pointer;
   display: inline-block;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding: 0 24px;
   opacity: 0.6;
   transition: 0.3s;
   -webkit-transition: 0.3s;
@@ -119,21 +146,20 @@ a {
 
 .btn .tooltip {
   visibility: hidden;
-  width: 120px;
-  background-color: black;
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
   text-align: center;
-  padding: 4px 0;
-  border-radius: 8px;
+  padding: 4px 8px;
+  border-radius: 12px;
 
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
-  font-size: 75%;
+  font-size: 60%;
 
   position: absolute;
   bottom: 100%;
-  left: 50%; 
-  margin-left: -60px;
+  margin: 0 auto;
   z-index: 99;
 }
 
@@ -149,7 +175,6 @@ a {
   background: none;
   border-radius: 32px;
   border: 2px solid white;
-  cursor: pointer;
   display: inline-block;
   padding: 8px;
   padding-left: 24px;
@@ -170,8 +195,8 @@ a {
   align-items: center;
   min-width: 16px;
   min-height: 16px;
-  padding: auto;
   font-size: 150%;
+  line-height: 1;
   color: white;
   opacity: 0.6;
   transition: 0.3s;
@@ -188,35 +213,6 @@ a {
   text-align: center;
   margin: auto;
 }
-
-.arrow {
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  border-radius: 1px;
-  display: inline-block;
-  padding: 3px;
-}
-
-.arrow.right {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.arrow.left {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-.arrow.up {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.arrow.down {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-}
-
 
 .overlay {
   position: absolute;
@@ -236,13 +232,13 @@ a {
 
 .horizontal-container {
   display: flex;
-  overflow: auto;
 }
 
 .vertical-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .grid-container {
@@ -268,8 +264,10 @@ a {
 }
 
 .text-box {
+  box-sizing: border-box;
   padding: 4em;
-  width: 50%;
+  width: 75%;
+  max-width: 720px;
   margin: auto;
   line-height: 1.5;
 }
@@ -379,24 +377,6 @@ a {
   font-weight: 100;
 }
 
-#font-title {
-  font-family: "Roboto Condensed Bold", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 8vw;
-  line-height: 0.8;
-  text-transform: uppercase;
-}
-
-#font-title-animated {
-  font-family: "Roboto Condensed Bold", Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 8vw;
-  line-height: 0.8;
-  text-transform: uppercase;
-  animation: 1s ease-in-out 1s 1 fade-out;
-  animation-fill-mode: forwards;
-}
-
 #name {
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: bold;
@@ -419,7 +399,7 @@ a {
   text-transform: uppercase;
   font-size: 0.7em;
   letter-spacing: 4px;
-  line-height: 1;
+  line-height: 1.5;
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
@@ -441,14 +421,16 @@ a {
 
   .text-box {
     padding: 1em;
-    width: 90vw;
-    margin: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
   }
 
   .overlay-text {
     position: static;
-    margin: 1em;
-    margin-top: 1.5em;
+    display: inline-block;
+    width: fit-content;
+    margin: 1.5em auto;
   }
 
   .grid-container {
@@ -486,17 +468,27 @@ a {
     text-align: center;
   }
 
-  .btn-icon{
+  .btn{
+    padding: 0 16px;
+  }
+
+  .gallery-control.btn-icon{
     width: 64px;
     height: 64px;
   }
 
-  .btn-icon i{
+  .gallery-control.btn-icon i{
     font-size: 150%;
   }
 
   .font-medium{
     font-size: 110%;
+  }
+
+  .footnote{
+    margin: 16px 0;
+    padding: 16px;
+    border-radius: 0;
   }
 }
 

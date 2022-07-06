@@ -1,13 +1,14 @@
 .scroll-snap-container{
     display: block;
     overflow: visible;
-    height: 100vh;
+    height: 100%;
     scroll-snap-type: y mandatory;
 }
 
 .scroll-snap-item{
     scroll-snap-align: start;
-    height: 100vh;
+    height: 100%;
+    min-height: 512px;
     padding: 10%;
     box-sizing: border-box;
     clear: both;

@@ -45,12 +45,26 @@ footer {
     font-size: 100%;
 }
 
-img{
+.footnote{
+    background-color: white;
     border-radius: 16px;
 }
 
+.footnote a{
+    color: #111;
+}
+
+.footnote p{
+    color: #888;
+}
+
+img{
+    border-radius: 16px;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+}
+
 img.banner{
-    width: 100vw;
+    width: 100%;
     margin: 0;
     border-radius: 0;
     position: fixed;
@@ -58,17 +72,14 @@ img.banner{
 }
 
 video{
-    width: -moz-calc(100vw - 32px);
-    width: -webkit-calc(100vw - 32px);
-    width: -o-calc(100vw - 32px);
-    width: calc(100vw - 32px);
+    width: -moz-calc(100% - 32px);
+    width: -webkit-calc(100% - 32px);
+    width: -o-calc(100% - 32px);
+    width: calc(100% - 32px);
     margin: 16px;
     margin-bottom: 0;
     border-radius: 16px;
-}
-
-.section-separator{
-    height: 8em;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 .parallax-solid{
@@ -78,27 +89,59 @@ video{
     top: 56.25vw;
 }
 
-.color-slide{
+.storytelling-block{
     background-color: #ddd;
-    display: flex;
-    align-items: center;
-    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    text-align: left;
     width: auto;
     min-height: 128px;
-    height: 25vh;
     border-radius: 16px;
     padding: 64px 64px;
+    margin: 16px;
+}
+
+.block-grid{
+    display: grid;
+    gap: 16px;
+    padding: 0 16px;
+    justify-content: space-evenly;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+.block-grid > .storytelling-block{
+    margin: 0;
+}
+
+.storytelling-block p{
+    max-width: 50%;
+    margin: auto;
+}
+
+.block-grid > .storytelling-block p{
+    max-width: 100%;
+    margin: auto;
+}
+
+
+.block-icon{
+    text-align: center;
+    font-size: 300%;
+    margin-bottom: 32px;
+    width: 100%;
 }
 
 .img-mockup-lanscape{
-    width: 100vw;
+    width: 100%;
     align-self: center;
     border-radius: 16px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 .img-mockup-phone{
-    width: 25vh;
+    height: 75%;
+    min-height: 320px;
+    width: auto;
     align-self: center;
     border-radius: 24px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
@@ -127,11 +170,11 @@ video{
 }
 
 .separate-container.left{
-    grid-template-columns: 35vw auto;
+    grid-template-columns: 35% auto;
 }
 
 .separate-container.right{
-    grid-template-columns: auto 35vw;
+    grid-template-columns: auto 35%;
 }
 
 .text-container{
@@ -149,28 +192,30 @@ video{
 .btn-shape{
     background-color: white;
     color: #111;
+    border: none;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
 }
 
 .btn-shape:hover{
-    background-color: white;
-    color: orange;
-    border-color: orange;
+    background-color: orange;
+    color: white;
+    
 }
 
 .link{
-    color: black;
+    color: orange;
     transition: 0.2s;
 }
 
 .link:hover{
     color: orange;
-    border-bottom: 1px solid orange;
+    border-bottom: 2px solid orange;
 }
 
 .text-box-left {
     padding: 4em;
-    width: 50vw;
+    width: 50%;
     margin-right: auto;
     line-height: 1.5;
 }
@@ -205,13 +250,30 @@ video{
     color: #888;
 }
 
+.font-ex{
+    color: orange;
+    opacity: 0.75;
+    font-size: 80%;
+}
+
 .font-title-2d{
     font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
     color: black;
-    font-size: 6vw;
+    font-size: 7vw;
     line-height: 1;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+.font-subtitle{
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    text-align: center;
+    color: #111;
+    font-size: 150%;
+    line-height: 1.2;
     margin-top: 8px;
     margin-bottom: 8px;
 }
@@ -286,13 +348,30 @@ video{
         margin-top: 32px;
     }
 
-    .color-slide{
-        height: 15vh;
-        padding: 64px;
+    .storytelling-block{
+        height: 15%;
+        padding: 64px 32px;
+        margin: 16px 0;
         border-radius: 0;
     }
 
-    .section-separator{
-        height: 4em;
+    .block-grid{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0;
     }
+
+    .block-grid > .storytelling-block{
+        height: 100%;
+    }
+
+    .storytelling-block p{
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .footnote{
+        border-radius: 0;
+    }
+
   }

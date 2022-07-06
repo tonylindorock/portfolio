@@ -37,3 +37,43 @@ function windowScrolled() {
 
   handleNavbar();
 }
+
+function isInViewport(element) {
+  var top = element.offsetTop;
+  var left = element.offsetLeft;
+  var width = element.offsetWidth;
+  var height = element.offsetHeight;
+
+  while(element.offsetParent) {
+    element = element.offsetParent;
+    top += element.offsetTop;
+    left += element.offsetLeft;
+  }
+
+  return (
+    top < (window.pageYOffset + window.innerHeight) &&
+    left < (window.pageXOffset + window.innerWidth) &&
+    (top + height) > window.pageYOffset &&
+    (left + width) > window.pageXOffset
+  );
+}
+
+function updateGallery(id, dir){
+  var gallery = document.getElementById(id);
+
+  var totalScroll = gallery.scrollWidth - (parseInt($("#" + id).css("padding-left")) * 2); 
+  var ImgNum = gallery.childElementCount;
+
+  var ratio = totalScroll / ImgNum;
+
+  $("#" + id).css({
+    "scroll-snap-type": "none"
+  });
+  $("#" + id).animate({
+    scrollLeft: String(gallery.scrollLeft + dir * ratio)
+  }, 250, function(){
+    $("#" + id).css({
+      "scroll-snap-type": "x mandatory"
+    });
+  });
+}
