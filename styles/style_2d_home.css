@@ -1,6 +1,6 @@
 .scroll-snap-container{
     display: block;
-    overflow: visible;
+    overflow-y: visible;
     height: 100%;
     scroll-snap-type: y mandatory;
 }
