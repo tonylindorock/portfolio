@@ -1,6 +1,6 @@
 "use strict"
 
-const SPEED = 4;
+const SPEED_RATIO = 4;
 
 $(document).ready(function () {
   window.onscroll = function () {
@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     if (isInViewport(banner[0])) {
       window.requestAnimationFrame(function () {
-        var scrollOffset = -parseInt((window.scrollY / SPEED));
+        var scrollOffset = -parseInt((window.scrollY / SPEED_RATIO));
         $(".banner").css({
           'transform': 'translateY(' + scrollOffset + 'px)',
           '-webkit-transform': 'translateY(' + scrollOffset + 'px)'

@@ -16,7 +16,9 @@
 html {
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
   overflow-y: visible;
+  scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -115,6 +117,10 @@ video {
 
 a {
   text-decoration: none;
+}
+
+a.font-superscript{
+  cursor: pointer;
 }
 
 .link {
@@ -230,7 +236,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
-  -moz-background-size: cover;
 }
 
 .horizontal-container {
@@ -324,11 +329,32 @@ a {
 
 #navbar-bg{
   margin: 8px;
-  padding: 8px;
+  padding: 8px 16px;
   border-radius: 16px;
   background-color: #262626;
   box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
 }
+
+.indicator {
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  background-color: #bbb;
+  border-radius: 32px;
+  margin: 2px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  transition: 0.6s;
+}
+
+.indicator.active{
+  width: 16px;
+}
+
+.indicator:hover {
+  background-color: white;
+}
+
 
 .font-normal {
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
@@ -360,6 +386,12 @@ a {
 .font-bold {
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
   font-weight: 100;
+}
+
+.font-superscript{
+  padding: 0 2px;
+  vertical-align: super;
+  font-size: 75%;
 }
 
 #name {
@@ -437,6 +469,10 @@ a {
     font-size: 100%;
   }
 
+  #navbar-bg{
+    padding: 8px;
+  }
+
   img{
     width: 100vw;
     margin: 0;
@@ -450,13 +486,19 @@ a {
   }
 
   .btn{
-    padding: 8px 16px;
+    padding: 8px 12px;
   }
 
   .btn-icon{
     width: 64px;
     height: 64px;
     font-size: 32px;
+  }
+
+  .btn-icon.keep-size{
+    width: inherit;
+    height: inherit;
+    font-size: inherit;
   }
 
   .gallery-control.btn-icon{
@@ -476,6 +518,10 @@ a {
     margin: 16px 0;
     padding: 16px;
     border-radius: 0;
+  }
+
+  #navbar .btn{
+    font-size: 85%;
   }
 }
 
@@ -502,6 +548,7 @@ a {
 #parallax-pic-2 {
   background-image: url("../assets/images/atcw_signal.jpg");
   min-height: 768px;
+  animation: 2s ease 0s 1 scale-fade-in;
 }
 
 #parallax-pic-3 {
@@ -532,4 +579,35 @@ a {
 #parallax-solid {
   background-color: black;
   z-index: 2;
+}
+
+@keyframes scale-fade-in{
+  0%{
+      opacity: 0;
+      transform: scale(1.5);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes scale-out-fade-in{
+  0%{
+      opacity: 0;
+      transform: scale(0.5);
+  }
+  100%{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+@keyframes fade-in{
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  }
 }

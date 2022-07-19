@@ -14,7 +14,7 @@ window.onscroll = function() {
   const timer = setTimeout(function() {
     scrolled = false;
     $("#font-title").attr("id", "font-title-animated");
-  }, 1000);
+  }, 500);
 };
 
 function setupBtns() {
@@ -23,9 +23,19 @@ function setupBtns() {
   });
 }
 
-function goToTop(duration = 1000) {
+function goToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+function goToBottom(speed = 16) {
+  var dis = Math.abs(document.body.scrollHeight - window.scrollY);
+  var duration = dis / speed;
+
   $("html, body").animate({
-    scrollTop: "0"
+    scrollTop: String(document.body.scrollHeight)
   }, duration);
 }
 
@@ -56,24 +66,4 @@ function isInViewport(element) {
     (top + height) > window.pageYOffset &&
     (left + width) > window.pageXOffset
   );
-}
-
-function updateGallery(id, dir){
-  var gallery = document.getElementById(id);
-
-  var totalScroll = gallery.scrollWidth - (parseInt($("#" + id).css("padding-left")) * 2); 
-  var ImgNum = gallery.childElementCount;
-
-  var ratio = totalScroll / ImgNum;
-
-  $("#" + id).css({
-    "scroll-snap-type": "none"
-  });
-  $("#" + id).animate({
-    scrollLeft: String(gallery.scrollLeft + dir * ratio)
-  }, 250, function(){
-    $("#" + id).css({
-      "scroll-snap-type": "x mandatory"
-    });
-  });
 }
