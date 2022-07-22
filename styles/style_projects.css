@@ -85,7 +85,6 @@
   box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 32px;
   margin: 0 auto;
   border-radius: 48px;
   background-color: #ddd;
@@ -93,8 +92,17 @@
 
 .gallery-alt>img {
   width: 25%;
-  margin: 0 8px;
+  margin: 32px 8px;
   border-radius: 24px;
+  min-width: 0;
+}
+
+.gallery-alt>img:first-child {
+  margin-left: 32px;
+}
+
+.gallery-alt>img:last-child {
+  margin-right: 32px;
 }
 
 .gallery.portrait {
@@ -311,6 +319,11 @@
     width: 100%;
     margin: 0;
     border-radius: 24px;
+  }
+
+  .gallery-alt>img:first-child,
+  .gallery-alt>img:last-child {
+    margin: inherit;
   }
 
   .gallery-controls {
