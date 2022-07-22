@@ -6,11 +6,11 @@ body {
 }
 
 p {
-    color: #111;
+    color: inherit;
 }
 
 a {
-    color: #111;
+    color: inherit;
 }
 
 .btn-icon{
@@ -23,13 +23,13 @@ a {
 }
 
 h1{
-    color: #111;
+    color: inherit;
 }
 
 h2{
     font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #111;
+    color: inherit;
     font-size: 200%;
     line-height: normal;
     text-align: center;
@@ -38,7 +38,7 @@ h2{
 }
 
 footer {
-    color: #111;
+    color: inherit;
     margin: 16px;
     border-radius: 16px;
     background-color: #ddd;
@@ -63,19 +63,25 @@ footer {
     color: #888;
 }
 
+.no-shadow{
+    box-shadow: none;
+    text-shadow: none;
+}
+
 img{
     border-radius: 16px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 img.banner{
-    width: 100%;
+    width: 100vw;
     margin: 0;
     border-radius: 0;
     position: fixed;
     z-index: -1;
     animation: 1.5s ease 0s 1 scale-fade-in;
     animation-fill-mode: backwards;
+    will-change: transform, opacity;
 }
 
 video{
@@ -223,10 +229,11 @@ video{
 .btn-shape:hover{
     background-color: orange;
     color: white;
-    
 }
 
 .link{
+    font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+    font-weight: 100;
     color: orange;
     transition: 0.2s;
     padding: 0 4px;
@@ -289,7 +296,13 @@ a.font-superscript{
     color: orange;
     border-radius: 8px;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
-  }
+}
+
+.font-highlight{
+    padding: 0 2px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 0, 0.5);
+}
 
 .font-title-2d{
     font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
@@ -307,10 +320,9 @@ a.font-superscript{
     font-weight: 100;
     text-align: center;
     color: #111;
-    font-size: 150%;
+    font-size: 24px;
     line-height: 1.2;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin: 8px 16px;
 }
 
 .parallax-btn {
@@ -324,11 +336,6 @@ a.font-superscript{
 #title-name-container{
     font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
     font-weight: bold;
-}
-
-#parallax-pic-2d-0 {
-    background-image: url("../assets/images/nb_cover.jpg");
-    min-height: 540px;
 }
 
 @media only screen and (max-device-width: 1400px) {
@@ -411,6 +418,10 @@ a.font-superscript{
 
     .footnote{
         border-radius: 0;
+    }
+
+    .font-subtitle{
+        font-size: 20px;
     }
 
   }

@@ -16,8 +16,6 @@
 html {
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
-  overflow-y: visible;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
 }
@@ -34,6 +32,7 @@ body {
   height: 100%;
   width: 100%;
   color: white;
+  overflow-x: hidden;
   overflow-y: visible;
   background-color: black;
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
@@ -147,6 +146,11 @@ a.font-superscript{
   transition: 0.3s;
   -webkit-transition: 0.3s;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn:hover {
@@ -190,6 +194,11 @@ a.font-superscript{
   padding-right: 24px;
   transition: 0.3s;
   -webkit-transition: 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn-shape:hover{
@@ -211,6 +220,11 @@ a.font-superscript{
   transition: 0.3s;
   -webkit-transition: 0.3s;
   margin: 0 8px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn-icon:hover{
@@ -300,6 +314,7 @@ a.font-superscript{
   display: block;
   text-decoration: none;
   color: white;
+  opacity: 0.8;
   font-size: 20px;
   text-align: center;
   line-height: 2;
@@ -310,17 +325,23 @@ a.font-superscript{
   z-index: 1;
   transition: 0.3s;
   -webkit-transition: 0.3s;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .parallax-btn:hover {
   cursor: pointer;
-  font-size: 24px;
+  opacity: 1;
+  text-shadow: 0 0 16px white;
 }
 
 #navbar{
   z-index: 9;
   display: block;
-  font-size: 135%;
+  font-size: 20px;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -392,6 +413,14 @@ a.font-superscript{
   padding: 0 2px;
   vertical-align: super;
   font-size: 75%;
+}
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #name {
@@ -466,11 +495,11 @@ a.font-superscript{
   }
 
   #navbar {
-    font-size: 100%;
+    font-size: 90%;
   }
 
   #navbar-bg{
-    padding: 8px;
+    padding: 8px 0px;
   }
 
   img{
@@ -486,7 +515,7 @@ a.font-superscript{
   }
 
   .btn{
-    padding: 8px 12px;
+    padding: 8px 16px;
   }
 
   .btn-icon{
@@ -518,10 +547,6 @@ a.font-superscript{
     margin: 16px 0;
     padding: 16px;
     border-radius: 0;
-  }
-
-  #navbar .btn{
-    font-size: 85%;
   }
 }
 

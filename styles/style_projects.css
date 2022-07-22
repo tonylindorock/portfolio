@@ -16,8 +16,10 @@
   padding: 0 64px;
   margin-top: 8px;
   margin-bottom: 8px;
+  transform: rotateZ(0deg);
   animation: 0.3s cubic-bezier(0, .66, .33, 1) 0s 1 slide-in-from-left;
   animation-fill-mode: backwards;
+  will-change: transform;
 }
 
 .btn-project:hover {
@@ -230,6 +232,7 @@
   text-transform: uppercase;
   animation: 1s ease-in-out 2s 1 fade-out;
   animation-fill-mode: forwards;
+  will-change: opacity;
 }
 
 .font-block span {
@@ -249,7 +252,8 @@
   font-weight: 100;
 }
 
-@media only screen and (max-device-width: 1400px) {}
+@media only screen and (max-device-width: 1400px) {
+}
 
 @media only screen and (max-width: 800px) {
   .btn-project {

@@ -13,14 +13,12 @@ let firstName_1 = FIRST_NAME_1
 let lastName = LAST_NAME;
 
 $(document).ready(function() {
-  $("#btn-about").click(function() {
-    goToTop(500);
-  });
+  setupBtns();
 });
 
 function setupBtns() {
   $("#btn-about").click(function() {
-    goToTop(500);
+    goToTop();
   });
 }
 

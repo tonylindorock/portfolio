@@ -84,6 +84,7 @@ function updateGalleryIndicator(indicators, index){
     indicators.children[index].classList.add("active");
 }
 
+// called when gallery is scrolled by a mouse
 function galleryScrolled(e){
     if (!mouseOver){
         return;
@@ -107,9 +108,11 @@ function galleryMouseOver(state){
     mouseOver = state;
 }
 
+// determine current image index
+// using scrollLeft and scroll ratio
 function getImageIndex(currentPos, ratio){
     var pos = currentPos;
-    var id = 0;
+    let id = 0;
     while(pos >= ratio / 2){
         pos -= ratio;
         id += 1;

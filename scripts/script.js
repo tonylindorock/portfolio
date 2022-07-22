@@ -24,19 +24,11 @@ function setupBtns() {
 }
 
 function goToTop() {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  window.scrollTo(0, 0);
 }
 
-function goToBottom(speed = 16) {
-  var dis = Math.abs(document.body.scrollHeight - window.scrollY);
-  var duration = dis / speed;
-
-  $("html, body").animate({
-    scrollTop: String(document.body.scrollHeight)
-  }, duration);
+function goToBottom() {
+  window.scrollTo(0, document.body.scrollHeight);
 }
 
 function windowScrolled() {
