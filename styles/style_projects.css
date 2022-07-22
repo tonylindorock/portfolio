@@ -16,6 +16,7 @@
   padding: 0 64px;
   margin-top: 8px;
   margin-bottom: 8px;
+  width: fit-content;
   transform: rotateZ(0deg);
   animation: 0.3s cubic-bezier(0, .66, .33, 1) 0s 1 slide-in-from-left;
   animation-fill-mode: backwards;
@@ -125,6 +126,11 @@
   width: 80%;
   padding: 0 32px;
   margin: 8px auto;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gallery-controls.portrait {
