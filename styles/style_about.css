@@ -11,7 +11,6 @@
   width: 50%;
   animation: 1s ease 0.1s 1 scale-in;
   animation-fill-mode: backwards;
-  will-change: opacity;
 }
 
 @media only screen and (max-width: 600px) {

@@ -102,6 +102,7 @@ img {
   width: 100%;
   margin: 0;
   border-radius: 0;
+  animation: 1s ease 0s 1 fade-in;
 }
 
 video {
@@ -111,7 +112,11 @@ video {
 }
 
 .video-banner{
-  margin-top: 16px;
+  animation-name: fade-in;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
 }
 
 a {
@@ -496,11 +501,11 @@ a.font-superscript{
   }
 
   #navbar {
-    font-size: 90%;
+    font-size: 80%;
   }
 
   #navbar-bg{
-    padding: 8px 0px;
+    padding: 8px;
   }
 
   img{
@@ -516,7 +521,7 @@ a.font-superscript{
   }
 
   .btn{
-    padding: 8px 16px;
+    padding: 8px 14px;
   }
 
   .btn-icon{
