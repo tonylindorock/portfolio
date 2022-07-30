@@ -1,6 +1,8 @@
 "use strict"
 // script
 
+const NAVBAR_THRESHOLD = 72;
+
 let scrolled = false;
 
 $(document).ready(function() {
@@ -15,6 +17,13 @@ window.onscroll = function() {
     scrolled = false;
     $("#font-title").attr("id", "font-title-animated");
   }, 500);
+};
+
+document.onmousemove = function(e){
+  var y = e.clientY;
+  if (y >= document.documentElement.clientHeight - NAVBAR_THRESHOLD){
+    showNavbar();
+  }
 };
 
 function setupBtns() {

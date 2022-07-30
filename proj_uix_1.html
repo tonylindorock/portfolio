@@ -19,7 +19,7 @@
     <script src="scripts/gallery.js"></script>
 
     <link rel="icon" href="favicon.png">
-    <title>Work 2D • RISE App</title>
+    <title>Work UI/UX • ARise</title>
 </head>
 
 <!-- BODY -->
@@ -46,7 +46,7 @@
                 <h2>Role</h2>
                 <p class="font-medium font-condensed font-block" style="text-align: center;"><span>UI/UX Designer</span></p>
                 <br><br>
-                <p class="font-medium">This project was a collaboration with Tessa Hudson at Concordia University<a class="font-superscript" onclick="goToBottom()">2</a></span> in 2021.</p>
+                <p class="font-medium">This project was a collaboration with Tessa Hudson at Concordia University<a class="font-superscript" onclick="goToBottom()">2</a> in 2021.</p>
             </div>
 
             <div class="storytelling-block">
@@ -66,8 +66,11 @@
                 <br><br>
             </p>
             <p class="font-normal">
-                We also took a look at more inspirational projects such as<a class="link" href="https://www.crchange.net/toxicity/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">Toxi•City</a>, a film set in 2020's US Eastern seaboard where lives of six characters have been affected by sea-level change and flooding in an urban area. We are therefore also exploring the possible impact of sea- level change.
+                One of the primary inspirations for ARise is Mel Chin's<a class="link" href="https://melchin.org/oeuvre/unmoored/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">Unmoored</a>(2018), an AR mobile application experience available in Times Square that allowed pedestrians to see the surrounding area as it would appear once sea levels have risen, flooding the city.
             </p>
+            <!--<p class="font-normal">
+                We also took a look at more inspirational projects such as<a class="link" href="https://www.crchange.net/toxicity/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">Toxi•City</a>, a film set in 2020's US Eastern seaboard where lives of six characters have been affected by sea-level change and flooding in an urban area. We are therefore also exploring the possible impact of sea-level change.
+            </p>-->
         </div>
 
         <div class="section-separator"></div>
@@ -156,7 +159,9 @@
             <span style="text-transform: none;">
                 To change the year, users can simply swipe up or down to go forward into the future or go backward in time.
                 <br><br>
-                The program uses the sea level data from NASA and automatically updates the number indicating sea level depending on the year. The model will also reflect the sea level as the water rises and floods the street and buildings.
+                The program automatically updates the number indicating sea level depending on the year. The model will also reflect the sea level as the water rises and floods the street and buildings.
+                <br><br>
+                We can also see the pollution level rising as various littered objects appear in the water.
             </span>
         </p>
 
@@ -177,36 +182,29 @@
                 Users need to press on the circular button in the right corner and drag it up or down to go forward or backward in time.
             </p>
             <br>
-            <p class="font-normal">Simple and understandable but requires an extra step.</p>
+            <p class="font-normal">Evaluation: Simple and understandable but requires an extra step.</p>
             <br><br>
             <p class="font-medium font-condensed font-block"><span>Iteration 2: Horizontal Timeline</span></p>
             <p class="font-medium">
                 Users need to swipe right or left at the bottom to go forward or backward in time.
             </p>
             <br>
-            <p class="font-normal">Sensable and logical but still not intuitive for single-handed use.</p>
+            <p class="font-normal">Evaluation: Sensable and logical but still not intuitive for single-handed use.</p>
             <br><br>
             <p class="font-medium font-condensed font-block"><span>Iteration 3: Number Picker</span></p>
             <p class="font-medium">
                 Users need to tap on the number and swipe down or up to go forward or backward in time.
             </p>
             <br>
-            <p class="font-normal">It requires an extra step. And swiping down usually associates with decreasing quantity.</p>
+            <p class="font-normal">Evaluation: It requires an extra step. And swiping down usually associates with decreasing quantity.</p>
             <br><br>
             <p class="font-medium font-condensed font-block"><span>Iteration 4: Page Scrolling</span></p>
             <p class="font-medium">
                 Users can swipe up or down to go forward or backward in time.
             </p>
             <br>
-            <p class="font-normal">Simple and natural. Swiping up is the most common action on smartphones.</p>
+            <p class="font-normal">Evaluation: Simple and natural. Swiping up is the most common action on smartphones, easily achievable with one hand.</p>
             <br><br>
-        </div>
-
-        <div class="gallery-indicators" id="gallery-ui-indicators">
-            <a class="indicator active" onclick='indicatorClicked("gallery-ui", 0)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-ui", 1)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-ui", 2)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-ui", 3)'></a>
         </div>
 
         <div class="gallery portrait" id="gallery-ui" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
@@ -214,6 +212,12 @@
             <img src="assets/images/rise_iteration_3.png">
             <img src="assets/images/rise_iteration_4.jpg">
             <img src="assets/images/rise_changing_year.jpg">
+        </div>
+        <div class="gallery-indicators" id="gallery-ui-indicators">
+            <a class="indicator active" onclick='indicatorClicked("gallery-ui", 0)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-ui", 1)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-ui", 2)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-ui", 3)'></a>
         </div>
 
         <div class="gallery-controls portrait">
@@ -226,7 +230,7 @@
         <p class="caption center">
             <span class="font-bold">UI Iterations</span>
             <br>
-            <span style="text-transform: none;">Each image showcases one iteration of the year slider.</span>
+            <span style="text-transform: none;">Each image showcases an iteration of the year slider.</span>
         </p>
 
         <div class="section-separator"></div>
@@ -292,6 +296,7 @@
         </div>
         <!-- FOOTER -->
         <footer>
+            <img class="logo" src="assets/images/logo.png">
             <p><span class="font-bold">Created by</span><br>Yichen Wang</p>
             <p><span class="font-bold">Email</span><br>tonylindorock@gmail.com</p>
             <p>

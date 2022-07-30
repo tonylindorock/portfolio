@@ -19,7 +19,7 @@
     <script src="scripts/gallery.js"></script>
 
     <link rel="icon" href="favicon.png">
-    <title>Work • Noteeboardd</title>
+    <title>Work UI/UX • Noteeboardd</title>
 </head>
 
 <!-- BODY -->
@@ -59,7 +59,7 @@
         <div class="block-grid">
             <div class="storytelling-block">
                 <h2>Research</h2>
-                <p class="font-medium">Text editors are designed to be work-oriented <span class="font-highlight">without</span> actually encouraging users to type.</p>
+                <p class="font-medium">Text editors are designed to be work-oriented <span class="font-highlight">without</span> encouraging users to type.</p>
                 <br>
                 <p class="font-normal">Ex: Google Doc, MS Word, Apple Pages.</p>
                 <br>
@@ -71,7 +71,7 @@
                 <br>
                 <p class="font-normal">Ex:<a class="link" href="https://desairem.com/wordpress/ufocus/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">uFocus</a>,<a class="link" href="http://writemonkey.com/index.php" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">WriteMonkey</a>.</p>
                 <br>
-                <p class="font-medium">Playerful text editors actaully exist. Belive it or not. But it <span class="font-highlight">decreases</span> the amount of work users can achieve in a single session.</p>
+                <p class="font-medium">Playerful text editors exist. But it <span class="font-highlight">decreases</span> the amount of work users can achieve in a single session.</p>
                 <br>
                 <p class="font-normal">Ex:<a class="link" href="https://ash-k.itch.io/textreme" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">Textreme</a>,<a class="link" href="https://ash-k.itch.io/textreme-2" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">Textreme 2</a>.</p>
                 <br>
@@ -82,25 +82,27 @@
 
             <div class="storytelling-block">
                 <h2>User Research</h2>
-                <p class="font-medium">I conducted <span class="font-highlight">8</span> interviews. Interviewees were all <span class="font-highlight">university students</span> with similar age.</p>
+                <p class="font-medium">I conducted <span class="font-highlight">8</span> interviews. All interviewees were <span class="font-highlight">university students</span> with similar age.</p>
                 <br>
                 <p class="font-normal">
-                    Here are my questions:
+                    Here were my interview questions:
                     <br><br>
-                    1) Do you use Google Docs, MS Word, or Apple Pages? Do you use Apple Notes or MS OneNote? For what usually?
-                    <br>
-                    2) Do you always turn to those apps when you have something to write down? This includes thoughts, simple notes, lists, reminders...
-                    <br>
-                    3) For those apps you use, what aspect of it do you like the most? Simplicity, functionality, interface, or else? And why?
-                    <br>
-                    4) Is there any text editor you use to help you focus on writing?
-                    <br>
-                    5) Do you think typing should be fun and playful? What modifications would you propose?
-                    <br>
-                    6) What helps you stay focus when you type?
-                    <br>
-                    7) What are your thoughts about this application if you are using it for typing? (Textreme 2) What do you think about this then? (uFocus)
                 </p>
+                <ol>
+                    <li>Do you use Google Docs, MS Word, or Apple Pages? Do you use Apple Notes or MS OneNote? For what usually?</li>
+                    <br>
+                    <li>Do you always turn to those apps when you have something to write down? This includes thoughts, simple notes, lists, reminders...</li>
+                    <br>
+                    <li>For those apps you use, what aspect of it do you like the most? Simplicity, functionality, interface, or else? And why?</li>
+                    <br>
+                    <li>Is there any text editor you use to help you focus on writing?</li>
+                    <br>
+                    <li>Do you think typing should be fun and playful? What modifications would you propose?</li>
+                    <br>
+                    <li>What helps you stay focus when you type?</li>
+                    <br>
+                    <li>What are your thoughts about this application if you are using it for typing? (Textreme 2) What do you think about this then? (uFocus)</li>
+                </ul>
                 <br><br>
                 <p class="font-medium">All the data were summarized and visualized using <span class="font-highlight">graphs</span>, <span class="font-highlight">card sorting</span> and <span class="font-highlight">empthy maps</span> (See below).</p>
             </div>
@@ -117,14 +119,13 @@
 
         <div class="section-separator"></div>
 
-        <div class="gallery-indicators" id="gallery-empathymaps-indicators">
-            <a class="indicator active" onclick='indicatorClicked("gallery-empathymaps", 0)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-empathymaps", 1)'></a>
-        </div>
-
         <div class="gallery" id="gallery-empathymaps" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
             <img src="assets/images/nb_em_m.jpg">
             <img src="assets/images/nb_em_f.jpg">
+        </div>
+        <div class="gallery-indicators" id="gallery-empathymaps-indicators">
+            <a class="indicator active" onclick='indicatorClicked("gallery-empathymaps", 0)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-empathymaps", 1)'></a>
         </div>
 
         <div class="gallery-controls">
@@ -137,7 +138,7 @@
         <p class="caption center">
             <span class="font-bold">Empathy Maps</span>
             <br>
-            <span style="text-transform: none;">Scroll left or right to see pictures</span>
+            <span style="text-transform: none;">Click buttons to see more pictures.</span>
         </p>
 
         <div class="section-separator"></div>
@@ -156,7 +157,7 @@
             <p class="font-medium">Deploying only <span class="font-highlight">essential</span> features for the text-editing and note-taking experience.</p>
             <br>
             <p class="font-medium font-condensed font-block"><span> Convenience / Constraint</span></p>
-            <p class="font-medium">Reducing the number of features to the <span class="font-highlight">bare minimum</span> so that users can spend less time learning the app but more time on typing.</p>
+            <p class="font-medium">Reducing the number of features to the <span class="font-highlight">bare minimum</span> so that users can spend less time learning the app and more time on typing.</p>
         </div>
 
         <div class="section-separator"></div>
@@ -164,12 +165,12 @@
         <div class="storytelling-block">
             <h2>Making It Playful</h2>
             <p class="font-normal">
-                Noteeboard resembles a real-life whiteboard with sticky notes. Drop shadows were added behind objects to create dimension.
+                Noteeboardd resembles a real-life whiteboard with sticky notes. Drop shadows were added behind objects to create depth.
             </p>
             <br><br>
             <p class="font-medium font-condensed font-block" style="text-align: center"><span>Note Themes</span></p>
             <p class="font-medium">
-                Users can create a note of three distinct looks from the top right corner. They include <span class="font-highlight">Playful</span>, <span class="font-highlight">Terminal</span>, and <span class="font-highlight">Plain</span>. Each of the themes has its distinctive look, function, and even sound effects!
+                Users can create a note of three distinct looks from the top right corner. They include <span class="font-highlight">Playful</span>, <span class="font-highlight">Terminal</span>, and <span class="font-highlight">Plain</span>. Each of the themes has its own look, function, and even sound effects!
             </p>
             <br>
             <p class="font-normal">
@@ -178,26 +179,27 @@
             <br><br>
             <p class="font-medium font-condensed font-block" style="text-align: center"><span>Decorative Magnets</span></p>
             <p class="font-medium">
-                Users can obtain magnets by reaching milestones or purchase them with points in the gift shop.
+                Users can obtain magnets by reaching milestones or purchasing them with points in the gift shop.
             </p>
             <br>
             <p class="font-normal">
-                Magnets can be placed anywhere in the same space with notes. And like notes, users can move them around anytime.
+                Magnets can be placed anywhere in the same space with notes. And like notes, users can move them around freely.
             </p>
         </div>
 
+        <img src="assets/images/nb_main_create_alt.jpg">
+        <p class="caption">Creating a note in Noteeboardd</p>
+        <div class="section-separator"></div>
+
+        <div class="gallery" id="gallery-notethemes" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
+            <img src="assets/images/nb_note_playful.jpg">
+            <img src="assets/images/nb_note_terminal.jpg">
+            <img src="assets/images/nb_note_plain.jpg">
+        </div>
         <div class="gallery-indicators" id="gallery-notethemes-indicators">
             <a class="indicator active" onclick='indicatorClicked("gallery-notethemes", 0)'></a>
             <a class="indicator" onclick='indicatorClicked("gallery-notethemes", 1)'></a>
             <a class="indicator" onclick='indicatorClicked("gallery-notethemes", 2)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-notethemes", 3)'></a>
-        </div>
-
-        <div class="gallery" id="gallery-notethemes" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
-            <img src="assets/images/nb_main_create_alt.jpg">
-            <img src="assets/images/nb_note_playful.jpg">
-            <img src="assets/images/nb_note_terminal.jpg">
-            <img src="assets/images/nb_note_plain.jpg">
         </div>
 
         <div class="gallery-controls">
@@ -210,7 +212,7 @@
         <p class="caption center">
             <span class="font-bold">Note Themes</span>
             <br>
-            <span style="text-transform: none;">Scroll left or right to see pictures</span>
+            <span style="text-transform: none;">Each note theme provides different aesthetics and experience.</span>
         </p>
 
         <div class="section-separator"></div>
@@ -222,7 +224,7 @@
 
         <div class="storytelling-block">
             <h2>Keeping User Engaged</h2>
-            <p class="font-normal">The final gamification features include a point system, user statistics, and the gift shop selling note themes and magnets.</p>
+            <p class="font-normal">The final gamification features include a point system, user statistics, and the gift shop selling note themes and decorative magnets.</p>
             <br>
             <p class="font-medium font-condensed font-block" style="text-align: center"><span>Statistics</span></p>
             <p class="font-medium">
@@ -232,19 +234,15 @@
             <p class="font-medium font-condensed font-block" style="text-align: center"><span>Points & Gift Shop</span></p>
             <p class="font-medium">
                 Users can <span class="font-highlight">earn</span> points by typing, checking checkboxes, or using Noteeboard every day. Completing milestones can also be rewarding.
-                <br><br>
+            </p>
+            <br>
+            <p class="font-normal">
+                One example for the milestone can be reaching 100th keystroke.
+            </p>
+            <br>
+            <p class="font-medium">
                 These points will be stored in the <span class="font-highlight">point bank</span>. Users can use their points to buy note themes and magnets from the gift shop.
             </p>
-            <p class="font-medium">
-
-            </p>
-        </div>
-
-        <div class="gallery-indicators" id="gallery-iterations-indicators">
-            <a class="indicator active" onclick='indicatorClicked("gallery-iterations", 0)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 1)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 2)'></a>
-            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 3)'></a>
         </div>
 
         <div class="gallery" id="gallery-iterations" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
@@ -252,6 +250,12 @@
             <img src="assets/images/Noteepadd-statistics-v2.png">
             <img src="assets/images/Noteepadd-statistics-v3.png">
             <img src="assets/images/nb_statistics.jpg">
+        </div>
+        <div class="gallery-indicators" id="gallery-iterations-indicators">
+            <a class="indicator active" onclick='indicatorClicked("gallery-iterations", 0)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 1)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 2)'></a>
+            <a class="indicator" onclick='indicatorClicked("gallery-iterations", 3)'></a>
         </div>
 
         <div class="gallery-controls">
@@ -264,7 +268,7 @@
         <p class="caption center">
             <span class="font-bold">Gamification Iterations</span>
             <br>
-            <span style="text-transform: none;">Each image demonstrates the gamification feature throughout the development.</span>
+            <span style="text-transform: none;">Each image demonstrates the gamification features throughout the development.</span>
         </p>
 
         <div class="section-separator"></div>
@@ -297,7 +301,7 @@
             </p>
             <br>
             <p class="font-normal">
-                Like in real-life, notes in Noteeboard are disposable. Once its purpose is fulfiled, it can be tossed into the trash can. And it cannot be recovered.
+                That is why Noteeboardd does not have continuous deletion and text selection. Deleting text in Noteeboard is made unnecessary. So like in real-life, notes in Noteeboard are disposable. Once its purpose is fulfiled, it can be tossed into the trash can.
             </p>
             <br><br>
             <p class="font-medium font-condensed font-block" style="text-align: center"><span>Force of habit</span></p>
@@ -317,11 +321,11 @@
 
         <div class="storytelling-block">
             <h2>At Last...</h2>
-            <p class="font-normal">
-                I asked 3 interviewees to test my prototypes and received positive feedback. The application is fun and playful. It encourages users to type and allows quick and easy note-taking.
+            <p class="font-medium">
+                I asked 3 interviewees to test my prototypes and received positive feedback. The final result concludes Noteeboardd is fun and playful. It encourages users to type and allows quick and easy note-taking.
             </p>
             <br>
-            <p class="font-medium">
+            <p class="font-normal">
                 Unfortunately, Noteeboardd was built with p5.js which is not a proper framework for a fully-fledged web application. Nevertheless, it provides users with a playful alternative to text-editing and note-taking and serves as a foundation for my gamification approach in other app designs.
             </p>
         </div>
@@ -340,6 +344,7 @@
 
         <!-- FOOTER -->
         <footer>
+            <img class="logo" src="assets/images/logo.png">
             <p><span class="font-bold">Created by</span><br>Yichen Wang</p>
             <p><span class="font-bold">Email</span><br>tonylindorock@gmail.com</p>
             <p>

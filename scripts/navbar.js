@@ -7,6 +7,10 @@ $(document).ready(function() {
     prevScrollpos = 0;
 });
 
+function showNavbar(){
+  $("#navbar").css("bottom", "0");
+}
+
 function handleNavbar(){
     // navbar animation
     var currentScrollPos = window.scrollY;
