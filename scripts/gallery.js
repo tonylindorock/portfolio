@@ -86,7 +86,7 @@ function updateGalleryIndicator(indicators, index){
 
 // called when gallery is scrolled by a mouse
 function galleryScrolled(e){
-    if (!mouseOver){
+    if (!mouseOver && !isTouchScreen()){
         return;
     }
 

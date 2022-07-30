@@ -357,10 +357,6 @@ a.font-superscript {
         width: 100%;
         min-height: 50%;
     }
-
-    .parallax-solid{
-        top: 50vh;
-    }
 }
 
 @media only screen and (max-width: 1000px) {

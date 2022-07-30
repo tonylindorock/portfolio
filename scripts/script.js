@@ -68,3 +68,10 @@ function isInViewport(element) {
     (left + width) > window.pageXOffset
   );
 }
+
+function isTouchScreen(){
+  if(window.matchMedia("(pointer: coarse)").matches){
+    return true;
+  }
+  return false;
+}

@@ -527,7 +527,7 @@ a.font-superscript{
 
   #parallax-pic-5 {
     background-image: url("../assets/images/ap_frame.jpg");
-    height: 50%;
+    height: 100vw;
   }
 }
 
