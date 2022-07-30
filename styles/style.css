@@ -531,7 +531,7 @@ a.font-superscript{
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .text-box {
     padding: 32px;
     width: 100%;

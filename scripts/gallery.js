@@ -86,10 +86,12 @@ function updateGalleryIndicator(indicators, index){
 
 // called when gallery is scrolled by a mouse
 function galleryScrolled(e){
-    if (!mouseOver && !isTouchScreen()){
-        return;
+    if (!isTouchScreen()){
+        if (!mouseOver){
+            return;
+        }
     }
-
+    
     var indicators = document.getElementById(e.id + "-indicators");
 
     var currentPos = e.scrollLeft;

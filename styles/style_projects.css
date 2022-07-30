@@ -268,7 +268,7 @@
 @media only screen and (max-device-width: 1400px) {
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
   .btn-project {
     font-size: 250%;
     padding: 0 32px;
@@ -301,7 +301,7 @@
 
   .gallery>img {
     margin-right: 8px;
-    border-radius: 8px;
+    border-radius: 16px;
   }
 
   .gallery.portrait>img {
