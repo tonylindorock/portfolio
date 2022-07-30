@@ -351,27 +351,11 @@ a.font-superscript {
     .parallax {
         background-attachment: scroll;
     }
-
-    img.banner {
-        object-fit: cover;
-        width: 100%;
-        min-height: 50%;
-    }
-
-    .parallax-solid{
-        top: 50vh;
-    }
 }
 
 @media only screen and (max-width: 1000px) {
-    img.banner {
-        object-fit: cover;
-        width: 100%;
-        min-height: 50%;
-    }
-
     .parallax-solid{
-        top: 50vh;
+        top: 50%;
     }
     
     footer {
