@@ -414,17 +414,14 @@ a.font-superscript{
 
 .font-normal {
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
-  
   font-size: 95%;
   line-height: 1.8;
 }
 
 .font-medium{
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
-  
   font-size: 125%;
-  line-height: 1.4;
-  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 .font-large{
@@ -464,7 +461,6 @@ a.font-superscript{
 
 #name {
   font-family: "Roboto Bold", Arial, Helvetica, sans-serif;
-  
   font-size: 150%;
   line-height: 0.8;
   position: fixed;
@@ -474,7 +470,6 @@ a.font-superscript{
 
 #email {
   font-family: "Roboto Light", Arial, Helvetica, sans-serif;
-  
   font-size: 65%;
 }
 
