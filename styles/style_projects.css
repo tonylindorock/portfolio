@@ -119,6 +119,10 @@
   margin-left: 0;
 }
 
+.gallery-alt.landscape>img{
+  width: 50%;
+}
+
 .gallery-controls {
   box-sizing: border-box;
   display: grid;
