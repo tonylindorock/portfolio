@@ -125,6 +125,10 @@ video {
     margin: 16px;
 }
 
+.storytelling-block.no-fill{
+    background: none;
+}
+
 .block-grid {
     display: grid;
     gap: 16px;
