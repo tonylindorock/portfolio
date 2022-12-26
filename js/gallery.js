@@ -46,22 +46,17 @@ function updateGallery(id, dir) {
 
     updateIndicators(id, dir);
     updateScroll(gallery, gallery.scrollLeft + dir * getScrollRatio(gallery));
+    updateButtons(id);
 }
 
 function updateIndicators(id, dir){
     var indicators = document.getElementById(id + "-indicators");
-    let currentId = 0;
+    
+    var current = getCurrentIndex(indicators);
 
-    for(let i = 0; i < indicators.childElementCount; i++){
-        if (indicators.children[i].classList.contains("active")){
-            currentId = i;
-            break;
-        }
-    }
-
-    if (currentId + dir < indicators.childElementCount && currentId + dir >= 0){
-        indicators.children[currentId].classList.remove("active");
-        indicators.children[currentId + dir].classList.add("active");
+    if (current + dir < indicators.childElementCount && current + dir >= 0){
+        indicators.children[current].classList.remove("active");
+        indicators.children[current + dir].classList.add("active");
     }
 }
 
@@ -71,6 +66,7 @@ function indicatorClicked(id, index){
 
     updateGalleryIndicator(indicators, index);
     updateScroll(gallery, index * getScrollRatio(gallery));
+    updateButtons(id);
 }
 
 // update gallery when indicators clicked
@@ -104,6 +100,7 @@ function galleryScrolled(e){
     }
 
    updateGalleryIndicator(indicators, index);
+   updateButtons(e.id);
 }
 
 function galleryMouseOver(state){
@@ -120,4 +117,34 @@ function getImageIndex(currentPos, ratio){
         id += 1;
     }
     return id;
+}
+
+function getCurrentIndex(indicators){
+    let currentId = 0;
+
+    for(let i = 0; i < indicators.childElementCount; i++){
+        if (indicators.children[i].classList.contains("active")){
+            currentId = i;
+            return currentId;
+        }
+    }
+}
+
+function updateButtons(id){
+    var btnContainer = document.getElementById(id + "-controls");
+    var indicators = document.getElementById(id + "-indicators");
+    var num = indicators.childElementCount;
+
+    var current = getCurrentIndex(indicators);
+
+    if (current <= 0){
+        btnContainer.children[0].classList.add("disabled");
+    }else{
+        btnContainer.children[0].classList.remove("disabled");
+    }
+    if (current >= num - 1){
+        btnContainer.children[1].classList.add("disabled");
+    }else{
+        btnContainer.children[1].classList.remove("disabled");
+    }
 }

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <!-- HEAD -->
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" content="strict-origin">
@@ -19,56 +20,71 @@
 </head>
 
 <!-- BODY -->
-  <body style="min-height: none; height: 100%">
-    <div class="nav-bar" style="position: fixed; left: 0; top: 0; background: none;">
-      <a class="nav-bar-title" style="position: fixed;">YICHEN WANG</a>
-      <div style="float: right; display: block; margin-left: auto; margin-right: 24px;">
-        <a href="index.html" class="btn-text btn-link-font current">Home</a>
-        <a href="games.html"class="btn-text btn-link-font">Games</a>
-        <a class="btn-text btn-link-font">3D</a>
-        <a class="btn-text btn-link-font">UIX</a>
-        <a href="about.html" class="btn-text btn-link-font">About</a>
-      </div>
-    </div>
 
-    <div class="scroll-snap-container" id="home-content">
-      <div class="scroll-snap-item">
-        <div class="float-center">
-          <h1 style="text-align: left; display: block;">Hello,<br>welcome.</h1>
-          <h1><i class="fa fa-angle-down"></i></h1>
-        </div>
-      </div>
-      <div class="scroll-snap-item">
-        <div class="float-center">
-          <h1>I make games.</h1>
-        </div>
-        <img src="../assets/images/oblivion_cover.jpg">
-      </div>
-      <div class="scroll-snap-item">
-        <div class="float-center">
-          <h1>I shape.</h1>
-        </div>
-        <img src="../assets/images/hd_frame_0.jpg">
-      </div>
-      <div class="scroll-snap-item">
-        <div class="float-center">
-          <h1>I plan.</h1>
-        </div>
-        <img src="../assets/images/rise_cover.jpg">
-      </div>
+<body style="min-height: none; height: 100%">
+  <div class="nav-bar" style="position: fixed; left: 0; top: 0; background: none;">
+    <a class="nav-bar-title" style="position: fixed;">YICHEN WANG</a>
+    <div style="float: right; display: block; margin-left: auto;" id="nav-bar-btns">
+      <a href="index.html" class="btn-text btn-link-font current">Home</a>
+      <a href="games.html" class="btn-text btn-link-font">Games</a>
+      <a href="3d.html" class="btn-text btn-link-font">3D</a>
+      <a href="uix.html" class="btn-text btn-link-font">UIX</a>
+      <a href="about.html" class="btn-text btn-link-font">About</a>
+      <a id="nav-menu-btn" href="javascript:void(0);" class="btn-text btn-link-font" onclick="openNavMenu(1)"><i class="fa fa-bars"></i></a>
     </div>
+  </div>
+  <!-- The overlay -->
+  <div class="nav-overlay" id="nav-menu">
+    <button href="javascript:void(0)" class="btn-close" onclick="openNavMenu(0)"><i class="fa fa-times-circle"></i></button>
+    <div class="grid-container overlay-btns">
+      <a href="index.html" class="btn-text btn-link-font current">Home</a>
+      <a href="games.html" class="btn-text btn-link-font">Games</a>
+      <a href="3d.html" class="btn-text btn-link-font">3D</a>
+      <a href="uix.html" class="btn-text btn-link-font">UIX</a>
+      <a href="about.html" class="btn-text btn-link-font">About</a>
+    </div>
+  </div>
 
-    <footer style="position: fixed; background: none; left: 0; bottom: 0">
-      <div class="h-container" style="float: left; margin-right: auto; margin-left: 32px;">
-        <img class="logo" src="assets/images/logo.png">
+  <div class="scroll-snap-container" id="home-content">
+    <div class="scroll-snap-item anim-fade-in">
+      <div class="float-center">
+        <h1 class="anim-scale-out-fade-in" style="text-align: left; display: block;">Hello,<br>welcome.<br><span><i class="fa fa-angle-down" style="text-align: center; display: block;"></i></span></h1>
+      </div>
+      <img src="../assets/images/atcw_signal.jpg">
+    </div>
+    <div class="scroll-snap-item">
+      <div class="float-center" style="width: 100%">
+        <h1>I make games.</h1>
+      </div>
+      <img src="../assets/images/oblivion_cover.jpg">
+    </div>
+    <div class="scroll-snap-item">
+      <div class="float-center" style="width: 100%">
+        <h1>I shape.</h1>
+      </div>
+      <img src="../assets/images/hd_frame_0.jpg">
+    </div>
+    <div class="scroll-snap-item">
+      <div class="float-center" style="width: 100%">
+        <h1>I plan.</h1>
+      </div>
+      <img src="../assets/images/rise_cover.jpg">
+    </div>
+  </div>
+
+  <footer style="position: fixed; background: none; left: 0; bottom: 0">
+    <div class="h-container" style="float: left;">
+      <img class="logo" src="assets/images/logo.png">
+      <div id="footer-info" style="margin-top: auto; margin-bottom: auto;">
         <p class="footer-font">© YICHEN WANG<br><span class="footer-font-alt">tonylindorock@gmail.com<span></p>
       </div>
-      <div class="h-container" style="float: right; margin-left: auto; margin-right: 32px;">
-        <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
-        <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-        <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-      </div>
-    </footer>
-  </body>
+    </div>
+    <div id="footer-link-btns" class="h-container" style="float: right;">
+      <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
+      <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+      <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+</body>
 
 </html>

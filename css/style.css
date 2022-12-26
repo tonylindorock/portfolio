@@ -92,6 +92,104 @@ button {
     background-color: transparent;
 }
 
+.empty-space-x1 {
+    height: 128px;
+}
+
+.empty-space-x2 {
+    height: 256px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    z-index: 999;
+    width: 100%;
+
+    padding: 16px 32px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-bar-title {
+    z-index: 99;
+
+    font-family: "JetBrains Mono Bold", Arial, sans-serif;
+    font-size: 1.25em;
+    text-transform: uppercase;
+}
+
+.nav-overlay {
+    height: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    bottom: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+
+    overflow-x: hidden;
+    transition: 0.3s;
+
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.grid-container.overlay-btns {
+    position: relative;
+    width: 256px;
+    margin: auto auto;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    text-align: center;
+    grid-template-columns: auto;
+}
+
+.footnote {
+    display: block;
+    margin: 16px;
+    padding: 16px 15%;
+    border-radius: 24px;
+    background-color: #262626;
+
+    font-family: "Barlow", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.3px;
+}
+
+.footnote a {
+    color: #eee;
+}
+
+.footnote p {
+    color: #aaa;
+    margin: auto;
+    max-width: 1152px;
+}
+
+.footnote a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    display: inline-block;
+    height: 40px;
+    width: auto;
+    margin: auto 24px;
+
+    border-radius: 64px;
+}
+
 
 /**************** Typefaces ****************/
 h1 {
@@ -119,6 +217,8 @@ h3 {
     letter-spacing: 2px;
 
     display: inline-block;
+
+    margin: 16px 0;
 }
 
 .btn-font {
@@ -151,7 +251,7 @@ h3 {
 
 .footer-font-alt {
     font-family: "JetBrains Mono", Arial, sans-serif;
-    font-size: 12px;
+    font-size: inherit;
 }
 
 
@@ -176,7 +276,7 @@ h3 {
     -ms-user-select: none;
 }
 
-.disabled{
+.disabled {
     cursor: default;
     pointer-events: none;
 }
@@ -218,7 +318,7 @@ h3 {
     margin: 0 12px;
 
     background: none;
-    color: white;
+    color: #fff;
 
     transition: 0.3s;
     -webkit-transition: 0.3s;
@@ -240,7 +340,9 @@ h3 {
 }
 
 .btn-text.current {
-    color: #ffcc00;
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
 }
 
 #btn-gotop {
@@ -303,8 +405,7 @@ h3 {
     position: relative;
     aspect-ratio: 16 / 9;
 
-    border-radius: 16px;
-    border: 3px solid transparent;
+    border-radius: 24px;
 
     overflow: hidden;
 
@@ -316,17 +417,11 @@ h3 {
     -ms-user-select: none;
     user-select: none;
 
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -ms-transition-property: -ms-transform;
-    -o-transition-property: -o-transform;
     transition-property: transform;
     transition-duration: 0.3s;
 }
 
 .btn-proj:hover {
-    border: 3px solid #fff;
-
     transform: scale(1.05);
 }
 
@@ -339,32 +434,32 @@ h3 {
     width: 100%;
 }
 
-.btn-proj>p.title, .btn-proj>p.des{
+.btn-proj>p.title,
+.btn-proj>p.des {
     position: absolute;
 
-    padding: 8px 12px;
+    padding: 8px 14px;
     margin: 8px;
 
-    border-radius: 8px;
+    border-radius: 64px;
 
     background: #262626;
     background: rgba(0, 0, 0, 0.75);
     color: #f1f1f1;
-    
+
     font-family: "JetBrains Mono Bold", Arial, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
+    font-size: 14px;
 
     visibility: hidden;
 }
 
-.btn-proj>p.title{
+.btn-proj>p.title {
     /* position */
     bottom: 0;
     left: 0;
 }
 
-.btn-proj>p.des{
+.btn-proj>p.des {
     /* position */
     bottom: 0;
     right: 0;
@@ -374,15 +469,64 @@ h3 {
     visibility: visible;
 }
 
+.overlay-btns>.btn-text {
+    padding: 24px 32px;
+    margin: 8px 0;
+
+    font-size: 1.5em;
+}
+
+.nav-overlay .btn-close {
+    position: absolute;
+    display: block;
+
+    right: 0;
+    top: 0;
+
+    font-size: 3em;
+    margin: 24px 48px;
+
+    color: #fff;
+
+    transform: scale(1);
+    transition: 0.3s ease;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-overlay .btn-close:hover {
+    transform: scale(1.25);
+}
+
+.nav-overlay .btn-close:active {
+    transform: scale(1);
+}
+
+#nav-menu-btn {
+    display: none;
+}
+
+#footer-link-btns {
+    margin-left: auto;
+}
 
 /**************** Reusable ****************/
+.line {
+    display: block;
+    height: 1px;
+    margin: 0 16px;
+
+    background-color: #aaa;
+}
+
 .grid-container {
     min-width: 50%;
     margin: 0 128px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 16px;
+    grid-gap: 24px;
 }
 
 .banner {
@@ -394,10 +538,6 @@ h3 {
 
     position: fixed;
     margin: 0;
-
-    animation: 1.5s ease 0s 1 scale-fade-in;
-    animation-fill-mode: backwards;
-    will-change: transform, opacity;
 }
 
 .banner>img {
@@ -461,68 +601,6 @@ h3 {
     flex-shrink: 1;
 }
 
-.empty-space-x1 {
-    height: 128px;
-}
-
-.empty-space-x2 {
-    height: 256px;
-}
-
-.nav-bar {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    z-index: 999;
-    width: 100%;
-    padding: 16px 8px;
-
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.nav-bar-title {
-    z-index: 99;
-
-    font-family: "JetBrains Mono Bold", Arial, sans-serif;
-    font-size: 1.25em;
-    text-transform: uppercase;
-    margin-left: 32px;
-}
-
-.footnote {
-    display: block;
-    margin: 16px;
-    padding: 16px 15%;
-    border-radius: 24px;
-    background-color: #262626;
-
-    font-family: "Barlow", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-    letter-spacing: 0.3px;
-}
-
-.footnote a {
-    color: #eee;
-}
-
-.footnote p {
-    color: #aaa;
-    margin: auto;
-    max-width: 1152px;
-}
-
-.footnote a:hover {
-    text-decoration: underline;
-}
-
-.logo {
-    object-fit: contain;
-    display: block;
-    width: 32px;
-    margin: auto 24px;
-}
-
 /* Home page content */
 .scroll-snap-container {
     width: 100%;
@@ -538,6 +616,8 @@ h3 {
     height: 100%;
     width: 100%;
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+
     display: flex;
     position: relative;
 }
@@ -551,26 +631,112 @@ h3 {
 }
 
 
-/**************** Small Screen Support ****************/
+/**************** Animations ****************/
+.anim-fade-in {
+    animation: 1s ease 0s 1 fade-in;
+    animation-fill-mode: backwards;
+    will-change: transform, opacity;
+}
+
+.anim-scale-out-fade-in {
+    animation: 1s cubic-bezier(0, .82, .27, .98) 0s 1 scale-out-fade-in;
+    animation-fill-mode: backwards;
+    will-change: transform, opacity;
+}
+
+.anim-scale-fade-in {
+    animation: 1s cubic-bezier(0, .82, .27, .98) 0s 1 scale-fade-in;
+    animation-fill-mode: backwards;
+    will-change: transform, opacity;
+}
+
+@keyframes scale-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-out-fade-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/**************** Small / Touch Screen Support ****************/
 @media only screen and (max-width: 1000px) {
-    body{
-        font-size: 14px;
+    body {
+        font-size: 15px;
     }
 
     footer {
-        display: grid;
-        row-gap: 64px;
-        grid-template-columns: auto;
+        display: inline-flex;
+        flex-wrap: wrap;
+        gap: 32px;
+
+        padding: 32px;
+
+        align-content: center;
+        justify-content: space-between;
+
+    }
+
+    footer>div {
+        margin: 0;
+    }
+
+    #footer-info {
+        margin: 0 auto;
+        margin-left: 16px;
+    }
+
+    .nav-bar {
+        padding-left: 24px;
+        padding-right: 8px;
+    }
+
+    .nav-overlay .btn-close {
+        margin: 24px 32px;
+    }
+
+    .grid-container.overlay-btns {
+        display: flex;
+        flex-direction: column;
+
+        padding: 32px;
+
         align-content: center;
         justify-content: space-evenly;
     }
 
     /**************** Typefaces ****************/
-    h1{
-        font-size: 2.5em;
+    h1 {
+        font-size: 2em;
     }
 
-    .subtitle{
+    .subtitle {
         font-size: 1.5em;
     }
 
@@ -580,18 +746,53 @@ h3 {
 
 
     /**************** Empty ****************/
-    .empty-space-x1{
+    .empty-space-x1 {
         height: 64px;
     }
 
-    .empty-space-x2{
+    .empty-space-x2 {
         height: 128px;
     }
 
 
     /**************** Interactive ****************/
+    .btn-proj {
+        border-radius: 16px;
+    }
+
+    .btn-proj>p.title,
+    .btn-proj>p.des {
+        visibility: visible;
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        text-align: left;
+    }
+
+    #btn-gotop {
+        margin: 32px;
+        bottom: 32px;
+    }
+
+    #footer-link-btns {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    #nav-bar-btns a:not(:last-child) {
+        display: none;
+    }
+
+    #nav-menu-btn {
+        display: inline-block;
+    }
+
 
     /**************** Reusables ****************/
+    .h-container>* {
+        margin: 0 16px;
+    }
+
     .banner {
         min-height: 50%;
         width: 100%;
@@ -601,7 +802,7 @@ h3 {
         width: 100%;
         height: 100%;
     }
-    
+
     .parallax-solid {
         top: 50vh;
     }
@@ -618,13 +819,35 @@ h3 {
 
     .grid-container {
         grid-template-columns: auto auto;
-        margin: 0 16px;
-        gap: 8px;
+        margin: 0 12px;
+        gap: 12px;
     }
 
     .footnote {
         margin: 16px 0;
         padding: 16px 32px;
         border-radius: 0;
+    }
+}
+
+@media (orientation: landscape) {
+    .banner {
+        min-height: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .parallax-solid {
+        top: 100%;
+    }
+
+    .grid-container.overlay-btns {
+        flex-direction: row;
+    }
+}
+
+@media (orientation: portrait) {
+    .grid-container {
+        grid-template-columns: auto;
     }
 }

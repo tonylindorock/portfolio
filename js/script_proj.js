@@ -46,15 +46,15 @@ function updatePageProgress() {
     progress = clamp(progress, 0, 100);
     var number = "000";
     if (progress < 10){
-        number = "00" + progress;
+        number = "&nbsp;&nbsp;" + progress;
     }else if(progress < 100){
-        number = "0" + progress;
+        number = "&nbsp;" + progress;
     }else{
         number = progress;
     }
 
     var result = "";
-    result += projTitle + " • " + number + "%";
+    result += projTitle + "&nbsp;&nbsp;" + number + "%";
 
     progressLabel.innerHTML = result;
 }

@@ -1,0 +1,52 @@
+/**************** Common ****************/
+body {
+    background-color: #eee;
+}
+
+footer {
+    background-color: #ddd;
+}
+
+
+/**************** Typefaces ****************/
+.footer-font{
+    color: #000;
+}
+
+
+/**************** Interactive ****************/
+.btn-proj {
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s;
+}
+
+.btn-proj:hover {
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+
+    transition: all 0.3s;
+}
+
+
+/**************** Reusable ****************/
+.footnote {
+    background-color: #fff;
+    color: #888;
+}
+
+.grid-container {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (orientation: portrait) {
+    .grid-container {
+        grid-template-columns: auto;
+    }
+}

@@ -6,7 +6,7 @@ const banner = document.getElementsByClassName('banner');
 
 function handleBanner(){
   if (isInViewport(banner[0])) {
-    $(".banner").css("visibility", "visible");
+    $(".banner").css("opacity", "1");
     window.requestAnimationFrame(function () {
       var scrollOffset = -parseInt((window.scrollY / SPEED_RATIO));
       $(".banner").css({
@@ -15,6 +15,6 @@ function handleBanner(){
       });
     });
   }else{
-    $(".banner").css("visibility", "hidden");
+    $(".banner").css("opacity", "0");
   }
 }
