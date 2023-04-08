@@ -8,8 +8,7 @@
     word-wrap: break-word;
     text-overflow: ellipsis;
 
-    height: 100vh;
-    width: 50%;
+    min-height: 100%;
 
     animation: 1s ease 0.1s 1 scale-in;
     animation-fill-mode: backwards;

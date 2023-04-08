@@ -23,7 +23,7 @@
 <!-- BODY -->
 
 <body>
-    <div class="nav-bar" style="position: absolute; left: 0; top: 0">
+    <div class="nav-bar" style="left: 0; top: 0">
         <a class="nav-bar-title">YICHEN WANG</a>
         <div style="float: right; display: block; margin-left: auto;" id="nav-bar-btns">
             <a href="index.html" class="btn-text btn-link-font">Home</a>
@@ -46,62 +46,54 @@
         </div>
     </div>
 
-    <div class="banner anim-fade-in">
-        <div class="float-center" style="width: 100%">
-            <h1 class="center-text  anim-scale-out-fade-in">Games<br>Game Design<br>Level Design<br>Programming</h1>
-        </div>
-        <img src="assets/images/oblivion_cover.jpg">
+    <div id="top-space" class="empty-space-x1" style="flex: 1"></div>
+    <h1 id="tab-name" class="text-box" style="margin-bottom: 16px;">Games</h1>
+
+    <div class="grid-container">
+        <a class="btn-proj" href="game_0.html">
+            <p class="title">Unwanted</p>
+            <img src="assets/images/prey_cover.jpg">
+        </a>
+        <a class="btn-proj">
+            <p class="title">Oblivion</p>
+            <img src="assets/images/oblivion_cover.jpg">
+        </a>
+        <a class="btn-proj" href="game_tbh.html">
+            <p class="title">The Bunker House</p>
+            <img src="assets/images/tbh_cover.jpg">
+        </a>
+        <a class="btn-proj">
+            <p class="title">MonoOS: Truth Be Told</p>
+            <img src="assets/images/dayless_concept_0.jpg">
+        </a>
     </div>
 
-    <div class="parallax-solid">
-        <div class="empty-space-x1"></div>
+    <div class="empty-space-x1"></div>
 
-        <div class="grid-container">
-            <a class="btn-proj" href="game_0.html">
-                <p class="title">Unwanted</p>
-                <img src="assets/images/prey_cover.jpg">
-            </a>
-            <a class="btn-proj">
-                <p class="title">Oblivion</p>
-                <img src="assets/images/oblivion_cover.jpg">
-            </a>
-            <a class="btn-proj" href="game_tbh.html">
-                <p class="title">The Bunker House</p>
-                <img src="assets/images/tbh_cover.jpg">
-            </a>
-            <a class="btn-proj">
-                <p class="title">MonoOS: Truth Be Told</p>
-                <img src="assets/images/dayless_concept_0.jpg">
-            </a>
-        </div>
-
-        <div class="empty-space-x1"></div>
-
-        <div class="h-container">
-            <a class="btn btn-font" style="margin: 0 auto; padding-left: 48px; padding-right: 48px" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">SEE MORE ON itch.io</a>
-        </div>
-
-        <div class="empty-space-x1"></div>
-
-        <!-- footer -->
-        <div class="footnote">
-            <p>Some games are also available on GitHub.</p>
-        </div>
-
-        <footer style="left: 0; bottom: 0">
-            <div class="h-container" style="float: left;">
-                <img class="logo" src="assets/images/logo.png">
-                <div id="footer-info" style="margin-top: auto; margin-bottom: auto;">
-                    <p class="footer-font">© YICHEN WANG<br><span class="footer-font-alt">tonylindorock@gmail.com<span></p>
-                </div>
-            </div>
-            <div class="h-container" style="float: right;">
-                <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
-                <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-            </div>
-        </footer>
+    <div class="h-container">
+        <a class="btn btn-font" style="margin: 0 auto; padding-left: 48px; padding-right: 48px" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">SEE MORE ON itch.io</a>
     </div>
+
+    <div class="empty-space-x1" style="flex: 1;"></div>
+
+    <!-- footer -->
+    <div class="footnote">
+        <p>Some games are also available on GitHub.</p>
+    </div>
+
+    <footer style="left: 0; bottom: 0">
+        <div class="h-container" style="float: left;">
+            <img class="logo" src="assets/images/logo.png">
+            <div id="footer-info" style="margin-top: auto; margin-bottom: auto;">
+                <p class="footer-font">© YICHEN WANG<br><span class="footer-font-alt">tonylindorock@gmail.com<span></p>
+            </div>
+        </div>
+        <div id="footer-link-btns" class="h-container" style="float: right;">
+            <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
+            <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>

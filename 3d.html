@@ -23,7 +23,7 @@
 <!-- BODY -->
 
 <body>
-    <div class="nav-bar" style="position: absolute; left: 0; top: 0">
+    <div class="nav-bar" style="left: 0; top: 0">
         <a class="nav-bar-title">YICHEN WANG</a>
         <div style="float: right; display: block; margin-left: auto;" id="nav-bar-btns">
             <a href="index.html" class="btn-text btn-link-font">Home</a>
@@ -47,56 +47,44 @@
         </div>
     </div>
 
-    <div class="banner anim-fade-in">
-        <div class="float-center" style="width: 100%">
-            <h1 class="center-text  anim-scale-out-fade-in">3D Production<br>Environment<br>Character<br>Game Assets</h1>
-        </div>
-        <img src="assets/images/dayless_showcase_tools.jpg">
+    <div id="top-space" class="empty-space-x1" style="flex: 1"></div>
+    <h1 id="tab-name" class="text-box" style="margin-bottom: 16px;">3D</h1>
+
+    <div class="grid-container">
+        <a class="btn-proj">
+            <p class="title">A Town Called Woods</p>
+            <img src="assets/images/atcw_signal.jpg">
+        </a>
+        <a class="btn-proj">
+            <p class="title">Hiking Dude</p>
+            <img src="assets/images/hd_frame_0.jpg">
+        </a>
+        <a class="btn-proj">
+            <p class="title">Abstract Planet</p>
+            <img src="assets/images/ap_frame.jpg">
+        </a>
+        <a class="btn-proj" href="game_tbh.html">
+            <p class="title">Dayless</p>
+            <img src="assets/images/dayless_showcase_guns.jpg">
+        </a>
     </div>
 
-    <div class="parallax-solid">
-        <div class="empty-space-x1"></div>
+    <div class="empty-space-x1" style="flex: 1"></div>
 
-        <div class="grid-container">
-            <a class="btn-proj">
-                <p class="title">A Town Called Woods</p>
-                <img src="assets/images/atcw_signal.jpg">
-            </a>
-            <a class="btn-proj">
-                <p class="title">Hiking Dude</p>
-                <img src="assets/images/hd_frame_0.jpg">
-            </a>
-            <a class="btn-proj">
-                <p class="title">Abstract Planet</p>
-                <img src="assets/images/ap_frame.jpg">
-            </a>
-            <a class="btn-proj" href="game_tbh.html">
-                <p class="title">Dayless</p>
-                <img src="assets/images/dayless_showcase_guns.jpg">
-            </a>
-        </div>
-
-        <div class="empty-space-x1"></div>
-
-        <!-- footer -->
-        <div class="footnote">
-            <p>Some games are also available on GitHub.</p>
-        </div>
-
-        <footer style="left: 0; bottom: 0">
-            <div class="h-container" style="float: left;">
-                <img class="logo" src="assets/images/logo.png">
-                <div id="footer-info" style="margin-top: auto; margin-bottom: auto;">
-                    <p class="footer-font">© YICHEN WANG<br><span class="footer-font-alt">tonylindorock@gmail.com<span></p>
-                </div>
+    <!-- footer -->
+    <footer style="left: 0; bottom: 0">
+        <div class="h-container" style="float: left;">
+            <img class="logo" src="assets/images/logo.png">
+            <div id="footer-info" style="margin-top: auto; margin-bottom: auto;">
+                <p class="footer-font">© YICHEN WANG<br><span class="footer-font-alt">tonylindorock@gmail.com<span></p>
             </div>
-            <div class="h-container" style="float: right;">
-                <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
-                <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
-            </div>
-        </footer>
-    </div>
+        </div>
+        <div id="footer-link-btns" class="h-container" style="float: right;">
+            <a class="btn btn-font" href="https://tony-lindorock.itch.io/" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer">itch.io</a>
+            <a class="btn-icon shape" href="https://linkedin.com/in/yichen-wang-63a965241" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="btn-icon" href="https://github.com/tonylindorock" onclick="window.open(this.href,'_blank');return false;" rel="noopener noreferrer"><i class="fa fa-github" aria-hidden="true"></i></a>
+        </div>
+    </footer>
 </body>
 
 </html>
