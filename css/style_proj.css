@@ -74,7 +74,9 @@ img.proj-title {
 
 .btn-return {}
 
-.btn-title {}
+.btn-title {
+    text-transform: uppercase;
+}
 
 
 /**************** Reusable ****************/
@@ -216,7 +218,6 @@ img.proj-title {
     display: inline-block;
 
     padding: 2px;
-    color: #262626;
     opacity: 1;
 
     font-size: 48px;
@@ -241,6 +242,52 @@ img.proj-title {
 .btn-gallery-prev.disabled,
 .btn-gallery-next.disabled {
     opacity: 0.1;
+}
+
+.video-controls{
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    margin: 32px 0;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.btn-icon-alt{
+    display: block;
+
+    min-width: 64px;
+    margin: 0 16px;
+    opacity: 1;
+
+    color: #eee;
+    font-size: 48px;
+    text-align: center;
+
+    transition: 0.3s ease;
+
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn-icon-alt:hover,
+.btn-icon-alt:hover {
+    transform: scale(1.2);
+}
+
+.btn-icon-alt:active,
+.btn-icon-alt:active {
+    transform: scale(1);
+}
+
+.btn-icon-alt.disabled,
+.btn-icon-alt.disabled {
+    display: none;
 }
 
 /**************** Reusable ****************/

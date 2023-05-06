@@ -18,7 +18,6 @@ $(document).ready(function () {
 
 function windowScrolled() {
     var scroll = window.scrollY;
-    console.log(scroll);
     if (scroll >= MAX_SCROLL) {
         $("#top-btns").removeClass("disabled");
 
