@@ -58,6 +58,7 @@ html {
 
 a {
     text-decoration: none;
+    cursor: pointer;
 }
 
 body {
@@ -169,16 +170,19 @@ button {
 
 .footnote {
     display: block;
+
+    font-family: "Barlow", Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    letter-spacing: 0.1px;
+}
+
+.footnote>div{
     margin: 16px;
     padding: 16px 24px;
 
     border-radius: 24px;
     background-color: #262626;
-
-    font-family: "Barlow", Arial, sans-serif;
-    font-size: 13px;
-    line-height: 1.5;
-    letter-spacing: 0.3px;
 }
 
 .footnote a {
@@ -197,6 +201,10 @@ button {
 
 .footnote a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+.footnote a:active {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .logo {
@@ -260,11 +268,17 @@ h3 {
     text-transform: uppercase;
 }
 
+.btn-link-font {
+    font-family: "JetBrains Mono Bold", Arial, sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
 .body-font {
     font-family: "Barlow", Arial, sans-serif;
     font-size: 1em;
     line-height: 2;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.1px;
 }
 
 .footer-font {
@@ -276,6 +290,17 @@ h3 {
     font-family: "JetBrains Mono", Arial, sans-serif;
     font-size: inherit;
 }
+
+.font-superscript{
+    padding: 0 2px;
+    vertical-align: super;
+    font-size: 75%;
+  }
+  
+  .font-superscript:hover {
+    border-radius: 2px;
+    background-color: rgba(255, 255, 255, 0.25);
+  }
 
 
 /**************** Interactive ****************/
@@ -480,32 +505,28 @@ h3 {
     transition: scale 1s ease;
 }
 
-.btn-proj p.title,
-.btn-proj p.des {
+.btn-proj div{
     z-index: 1;
     padding: 0 24px;
+    pointer-events: none;
 }
 
-.btn-proj>p.title {
+.btn-proj div>p.title {
     font-family: "Barlow ExtraBold", Arial, sans-serif;
 
-    margin-top: 32px;
+    margin-top: 24px;
     margin-bottom: 4px;
     font-size: 24px;
 }
 
-.btn-proj>p.des {
-    padding-bottom: 40px;
+.btn-proj div>p.des {
+    padding-bottom: 24px;
 
     font-family: "Barlow Bold", Arial, sans-serif;
     text-transform: uppercase;
     font-size: 13px;
     letter-spacing: 2px;
     opacity: 50%;
-}
-
-.btn-proj:hover>p {
-    visibility: visible;
 }
 
 .overlay-btns>.btn-text {
@@ -568,8 +589,28 @@ h3 {
     grid-gap: 24px;
 }
 
-.dynamic-corner:first-child{
+.grid-container.dynamic-corner{
+    grid-gap: 8px;
+}
+
+.dynamic-corner div{
+    border-radius: 0 0 0 0;
+}
+
+.dynamic-corner>div:first-child{
     border-radius: 24px 0 0 0;
+}
+
+.dynamic-corner>div:nth-child(2){
+    border-radius: 0 24px 0 0;
+}
+
+.dynamic-corner>div:last-child{
+    border-radius: 0 0 24px 0;
+}
+
+.dynamic-corner>div:nth-last-child(2){
+    border-radius: 0 0 0 24px;
 }
 
 .banner {
@@ -828,15 +869,6 @@ h3 {
     /**************** Interactive ****************/
     .btn-proj {
         border-radius: 16px;
-    }
-
-    .btn-proj>p.title,
-    .btn-proj>p.des {
-        visibility: visible;
-        margin: 0;
-        width: 100%;
-        border-radius: 0;
-        text-align: left;
     }
 
     #btn-gotop {
