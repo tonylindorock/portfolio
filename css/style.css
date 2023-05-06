@@ -225,6 +225,7 @@ button {
 h1 {
     font-family: "Barlow Bold", Arial, sans-serif;
     font-size: 3.5em;
+    line-height: 0.85;
     display: inline-block;
 }
 
@@ -252,7 +253,6 @@ h3 {
 }
 
 .btn-font {
-    text-transform: uppercase;
     font-family: "JetBrains Mono Bold", Arial, sans-serif;
     font-size: 1em;
 }
