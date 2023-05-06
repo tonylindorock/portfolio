@@ -244,6 +244,7 @@ h3 {
 }
 
 .btn-font {
+    text-transform: uppercase;
     font-family: "JetBrains Mono Bold", Arial, sans-serif;
     font-size: 1em;
 }

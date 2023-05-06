@@ -22,7 +22,7 @@
 
 
     <link rel="icon" href="favicon.png">
-    <title>A Town Called Woods • 3D</title>
+    <title>Dayless • 3D</title>
 </head>
 
 <!-- BODY -->
@@ -54,7 +54,7 @@
     <div class="btns-top disabled" id="top-btns">
         <a class="btn btn-return btn-font" href="3d.html"><i class="fa fa-angle-left"></i><span>&nbsp;3D</span></a>
         <div class="dropdown">
-            <button class="btn btn-title btn-font" id="page-progress" onclick='toggleDropdown()'>A Town Called Woods</button>
+            <button class="btn btn-title btn-font" id="page-progress" onclick='toggleDropdown()'>Dayless</button>
             <div class="dropdown-content disabled" id="dropdown-menu">
                 <button onclick='scrollToElement("s1")'>Overview&nbsp;<i class="fa fa-angle-right"></i></button>
                 <div class="line"></div>
@@ -65,32 +65,24 @@
         <a id="empty" class="btn btn-title btn-font" style="visibility: hidden">&lt; BACK</a>
     </div>
 
-    <div class="banner aspect-4x3 video">
-        <video autoplay muted loop id="video-atcw">
-            <source src="assets/videos/atcw.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
+    <div class="banner">
+        <img src="assets/images/dayless_concept_0.jpg">
     </div>
 
-    <div class="parallax-solid aspect-4x3">
+    <div class="parallax-solid">
 
-        <div class="video-controls" id="video-atcw-controls">
-            <button id="video-atcw-control-play" class="btn-icon-alt disabled" onclick='updateVideo(this, "video-atcw", "play")'><i class="fa fa-play-circle"></i></button>
-            <button id="video-atcw-control-pause" class="btn-icon-alt" onclick='updateVideo(this, "video-atcw", "pause")'><i class="fa fa-pause-circle"></i></button>
-            <button id="video-atcw-control-unmute" class="btn-icon-alt" onclick='updateVideo(this, "video-atcw", "unmute")'><i class="fa fa-volume-off"></i></button>
-            <button id="video-atcw-control-mute" class="btn-icon-alt disabled" onclick='updateVideo(this, "video-atcw", "mute")'><i class="fa fa-volume-up"></i></button>
-        </div>
-
-        <div id="s1" class="empty-space-x1"></div>
+        <div id="s1" class="empty-space-x2"></div>
 
         <div class="content-grid">
             <div style="display: inline-block; justify-self: start">
-                <img class="proj-title" src="assets/images/tbh_title.png" style="width: 50%">
-                <p class="subtitle" style="color: #ffcc00">Photorealistic<br>Photography Show</p>
+                <img class="proj-title" src="assets/images/dayless_title.png" style="width: 35%">
+                <p class="subtitle" style="color: #888">Retro FPS<br>Concept</p>
             </div>
             <div class="text-box contained body-font">
                 <p>
-                    A Town Called Woods is about a seemingly ordinary but mysterious town surrounded by forests in the middle of nowhere. From the surface, it looks like just another average, peaceful town, but there is always something lurking in the shadows. Even with traces of human activity, the town seems to be deserted. Overgrown vegetation, rusty metals, corroded walls, and remnants of previous occupants' possession are what have left in this place.
+                    Dayless is a concept for a stylized, retro survival horror FPS. Inspired by liminal space and brutalism, this game explores the desperation and fear of being lone.
+                    <br><br>
+                    It is set in a North American / Nordic suburban town in the retro-futuristic 1980s. The town is known as Woods.
                 </p>
             </div>
         </div>
@@ -99,19 +91,29 @@
 
         <div id="s2" class="content-bg" style="background-color: #222; color: #eee;">
 
+            <div class="empty-space-x1"></div>
+
             <!-- Gallery starts here -->
             <div class="gallery" id="gallery-playerfeedback" onscroll="galleryScrolled(this)" onmouseover='galleryMouseOver(true)' onmouseleave='galleryMouseOver(false)'>
                 <div class="image" onclick='indicatorClicked("gallery-playerfeedback", 0)'>
-                    <p class="caption">Signal</p>
-                    <img src="assets/images/atcw_signal.jpg">
+                    <p class="caption">Concept Art</p>
+                    <img src="assets/images/dayless_showcase_guns.jpg">
                 </div>
                 <div class="image" onclick='indicatorClicked("gallery-playerfeedback", 1)'>
-                    <p class="caption">Power Day</p>
-                    <img src="assets/images/atcw_power_day.jpg">
+                    <p class="caption">Back</p>
+                    <img src="assets/images/dayless_showcase_tools.jpg">
                 </div>
                 <div class="image" onclick='indicatorClicked("gallery-playerfeedback", 2)'>
-                    <p class="caption">Power Night</p>
-                    <img src="assets/images/atcw_power_night.jpg">
+                    <p class="caption">Close Up</p>
+                    <img src="assets/images/dayless_showcase_shotgun.jpg">
+                </div>
+                <div class="image" onclick='indicatorClicked("gallery-playerfeedback", 3)'>
+                    <p class="caption">Close Up</p>
+                    <img src="assets/images/dayless_showcase_pistol.jpg">
+                </div>
+                <div class="image" onclick='indicatorClicked("gallery-playerfeedback", 4)'>
+                    <p class="caption">Close Up</p>
+                    <img src="assets/images/dayless_concept_hugo.jpg">
                 </div>
             </div>
 
@@ -119,6 +121,8 @@
                 <a class="indicator active" onclick='indicatorClicked("gallery-playerfeedback", 0)'></a>
                 <a class="indicator" onclick='indicatorClicked("gallery-playerfeedback", 1)'></a>
                 <a class="indicator" onclick='indicatorClicked("gallery-playerfeedback", 2)'></a>
+                <a class="indicator" onclick='indicatorClicked("gallery-playerfeedback", 3)'></a>
+                <a class="indicator" onclick='indicatorClicked("gallery-playerfeedback", 4)'></a>
             </div>
 
             <div class="gallery-controls">
@@ -137,8 +141,8 @@
         <!-- footer -->
         <div class="v-container" style="width: 100%">
             <div class="quick-link-container">
+                <a class="btn btn-font" href="3d_ap.html"><i class="fa fa-angle-left"></i>&nbsp;&nbsp;Abstract Planet</a>
                 <div></div>
-                <a class="btn btn-font" href="3d_hd.html">Hiking Dude&nbsp;&nbsp;<i class="fa fa-angle-right"></i></a>
             </div>
 
             <div class="footnote">
