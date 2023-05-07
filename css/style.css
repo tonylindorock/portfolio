@@ -225,7 +225,6 @@ button {
 h1 {
     font-family: "Barlow Bold", Arial, sans-serif;
     font-size: 3.5em;
-    line-height: 0.85;
     display: inline-block;
 }
 
@@ -435,7 +434,7 @@ h3 {
     text-align: center;
     margin: auto;
 
-    text-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
 }
 
 .btn-icon.shape {
@@ -446,7 +445,7 @@ h3 {
     padding: 0 24px;
 
     font-size: 1.25em;
-    box-shadow: 0 0 32px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
 }
 
 .btn-proj {
@@ -468,8 +467,13 @@ h3 {
     -ms-user-select: none;
     user-select: none;
 
-    transition-property: transform;
     transition-duration: 0.3s;
+}
+
+.anim-fade-on-load {
+    animation: 0.3s cubic-bezier(0, .66, .33, 1) 0s 1 scale-out-fade-in;
+    animation-fill-mode: backwards;
+    will-change: transform;
 }
 
 .btn-proj:hover {
@@ -589,8 +593,15 @@ h3 {
     grid-gap: 24px;
 }
 
-.grid-container.dynamic-corner{
+.grid-container-gallery{
+    min-width: 50%;
+
+    display: grid;
     grid-gap: 8px;
+    margin: 0 16px;
+
+    min-width: 0;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .dynamic-corner div{
@@ -925,9 +936,28 @@ h3 {
         gap: 16px;
     }
 
+    .grid-container-gallery{
+        margin: 0;
+    
+        grid-template-columns: auto;
+    }
+
+    .dynamic-corner div,
+    .dynamic-corner>div:first-child,
+    .dynamic-corner>div:nth-child(2),
+    .dynamic-corner>div:last-child,
+    .dynamic-corner>div:nth-last-child(2){
+        border-radius: 0;
+    }
+    
+
     .footnote {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footnote>div{
         margin: 16px 0;
-        padding: 16px 32px;
         border-radius: 0;
     }
 }
