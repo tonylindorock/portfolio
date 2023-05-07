@@ -13,6 +13,7 @@ $(document).ready(function () {
         handleBanner();
         windowScrolled();
         updatePageProgress();
+        observeElementVis();
     };
 });
 
@@ -60,4 +61,27 @@ function updatePageProgress() {
 
 function clamp(val, min, max) {
     return val > max ? max : val < min ? min : val;
+}
+
+function observeElementVis(){
+    var elements = document.getElementsByClassName("scroll-reveal");
+    for (var i = 0; i < elements.length; i++) {
+        var e = elements[i];
+        if (isInViewport(e)){
+            reveal(e);
+        }else{
+            hide(e);
+        }
+    }
+}
+
+// scroll reveal function
+function reveal(e) {
+    e.classList.add("anim-reveal");
+    e.classList.remove("anim-hide");
+}
+
+function hide(e){
+    e.classList.remove("anim-reveal");
+    e.classList.add("anim-hide");
 }
