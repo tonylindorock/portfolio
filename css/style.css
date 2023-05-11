@@ -797,7 +797,7 @@ h3 {
 
 .anim-hide {
     animation: 1s ease 0s 1 fade-out;
-    animation-fill-mode: backwards;
+    animation-fill-mode: forwards;
     will-change: opacity;
 }
 

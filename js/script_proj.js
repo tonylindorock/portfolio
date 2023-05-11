@@ -5,9 +5,12 @@ const MAX_SCROLL = 70;
 var projTitle;
 var progressLabel;
 
+
 $(document).ready(function () {
     progressLabel = document.getElementById("page-progress")
     projTitle = progressLabel.innerHTML;
+
+    setupRevealElements();
 
     window.onscroll = function () {
         handleBanner();
@@ -61,6 +64,16 @@ function updatePageProgress() {
 
 function clamp(val, min, max) {
     return val > max ? max : val < min ? min : val;
+}
+
+function setupRevealElements(){
+    var elements = document.getElementsByClassName("scroll-reveal");
+    for (var i = 0; i < elements.length; i++) {
+        var e = elements[i];
+        if (isInViewport(e)){
+            reveal(e);
+        }
+    }
 }
 
 function observeElementVis(){
